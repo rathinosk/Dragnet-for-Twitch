@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_extName__",
+  "short_name": "__MSG_extShortName__",
+  "version": "0.2.0",
+  "description": "__MSG_extDescription__",
+  "default_locale": "en",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxVG9IAxee1XkGpY6fmeY261CM947iveeAwml7sGy+JDcSRMRqwnQDdGuyaNBk1QQYQnHSHLhevG24LtrjXMnv7l30r1Q8+PwWKKvdQZFZ85sPntLD1n+A1Xm3RIJVnBgEr+sw88/Dx1Tju2GuUZo4MEmJqe3NOPco/mXaK6No1YMW8PJvBm1sLnP+1ZifZxv8QYGpSS+wyyuK7OdcWEsDHMUO/lyRAf3xkg4Y30vKtDwngjqTEi2mkvPd6DYzg/nDIpy8fJ0a4EN6W8DN4iCoxgkcB6pKVya9IX6wCuKfprWlJjSY/iSAN3Fcrn8NV3+1Lg4eWoBNrNO8SOYCXRqAwIDAQAB",
+  "icons": { "16": "icons/icon-16.png", "32": "icons/icon-32.png", "48": "icons/icon-48.png", "128": "icons/icon-128.png" },
+  "permissions": ["storage", "alarms", "scripting"],
+  "host_permissions": ["https://www.twitch.tv/*"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "__MSG_actionTitle__",
+    "default_icon": { "16": "icons/icon-16.png", "32": "icons/icon-32.png", "48": "icons/icon-48.png", "128": "icons/icon-128.png" },
+    "default_popup": "ui/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.twitch.tv/*"],
+      "js": ["scraper/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["scraper/*.js", "core/*.js", "diag/capture.js", "diag/watch.js"],
+      "matches": ["https://www.twitch.tv/*"]
+    }
+  ]
+}

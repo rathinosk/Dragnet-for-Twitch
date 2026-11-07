@@ -1,0 +1,196 @@
+<!doctype html>
+<!-- SPDX-License-Identifier: GPL-3.0-or-later -->
+<!-- Copyright (C) 2026 Rathinosk -->
+<!-- Settings page (the gear button in the popup and the full page): scanning, stall detection, language, last scans, Danger Zone. Text comes from _locales:
+     settings.js fills the data-i18n attributes (ui/i18n.js) and the choices, and sets lang. -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="settingsPageTitle"></title>
+  <link rel="icon" href="../icons/icon-32.png">
+  <link rel="stylesheet" href="dragnet.css">
+  <script type="module" src="settings.js"></script>
+</head>
+<body data-view="settings">
+  <header class="topbar">
+    <a class="logo-link" href="about.html" data-i18n-title="aboutTitle" data-i18n-aria-label="aboutTitle"><img class="logo" src="../icons/icon-32.png" alt="" width="24" height="24"></a>
+    <h1 data-i18n="settingsPageTitle"></h1>
+    <nav class="nav">
+      <a class="btn" href="https://www.twitch.tv/drops/campaigns" target="_blank" rel="noopener" data-i18n="openCampaigns" data-i18n-title="openCampaignsTitle"></a>
+      <a class="btn" href="https://www.twitch.tv/drops/inventory" target="_blank" rel="noopener" data-i18n="openInventory" data-i18n-title="openInventoryTitle"></a>
+    </nav>
+    <span class="spacer"></span>
+    <a id="language-button" class="icon-btn" href="#language"></a>
+    <a class="icon-btn" href="help.html#settings" data-i18n-title="helpButton" data-i18n-aria-label="helpButton">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M6.2 6.3a1.9 1.9 0 0 1 3.7.5c0 1.3-1.9 1.6-1.9 2.8M8 11.6v.1"/></svg>
+    </a>
+    <a class="btn primary" href="page.html" data-i18n="helpBackToList"></a>
+  </header>
+  <main class="sheet">
+    <section id="scanning">
+      <h2 data-i18n="scanningHeading"></h2>
+      <div class="setting">
+        <div class="setting-text">
+          <label for="history-days" data-i18n="historyLabel"></label>
+          <p class="hint" data-i18n="historyHint"></p>
+        </div>
+        <select id="history-days"></select>
+      </div>
+      <div class="setting">
+        <div class="setting-text">
+          <label for="incremental" data-i18n="incrementalLabel"></label>
+          <p class="hint" data-i18n="incrementalHint"></p>
+        </div>
+        <input id="incremental" class="switch" type="checkbox" role="switch">
+      </div>
+      <div class="setting nested">
+        <div class="setting-text">
+          <label for="incremental-count" data-i18n="incrementalCountLabel"></label>
+        </div>
+        <select id="incremental-count"></select>
+      </div>
+      <div class="setting">
+        <div class="setting-text">
+          <label for="auto-claim" data-i18n="autoClaimLabel"></label>
+          <p class="hint" data-i18n="autoClaimHint"></p>
+          <p id="auto-claim-note" class="hint" hidden data-i18n="autoClaimUnavailable"></p>
+        </div>
+        <input id="auto-claim" class="switch" type="checkbox" role="switch">
+      </div>
+      <div class="setting">
+        <div class="setting-text">
+          <label for="inventory-check" data-i18n="inventoryCheckLabel"></label>
+          <p class="hint" data-i18n="inventoryCheckHint"></p>
+        </div>
+        <select id="inventory-check"></select>
+      </div>
+      <div class="setting">
+        <div class="setting-text">
+          <label for="drop-alert" data-i18n="dropAlertLabel"></label>
+          <p class="hint" data-i18n="dropAlertHint"></p>
+        </div>
+        <input id="drop-alert" class="switch" type="checkbox" role="switch">
+      </div>
+    </section>
+
+    <section id="stall">
+      <h2 data-i18n="stallHeading"></h2>
+      <div class="setting">
+        <div class="setting-text">
+          <label for="stall-detect" data-i18n="stallDetectLabel"></label>
+          <p class="hint" data-i18n="stallDetectHint"></p>
+        </div>
+        <input id="stall-detect" class="switch" type="checkbox" role="switch">
+      </div>
+      <div class="setting nested">
+        <div class="setting-text">
+          <label for="stall-reload" data-i18n="stallReloadLabel"></label>
+          <p class="hint" data-i18n="stallReloadHint"></p>
+        </div>
+        <input id="stall-reload" class="switch" type="checkbox" role="switch">
+      </div>
+      <div class="setting nested">
+        <div class="setting-text">
+          <label for="stall-reload-active" data-i18n="stallReloadActiveLabel"></label>
+        </div>
+        <input id="stall-reload-active" class="switch" type="checkbox" role="switch">
+      </div>
+      <div class="setting nested">
+        <div class="setting-text">
+          <label for="stall-reload-max" data-i18n="stallReloadMaxLabel"></label>
+          <p class="hint" data-i18n="stallReloadMaxHint"></p>
+        </div>
+        <select id="stall-reload-max"></select>
+      </div>
+    </section>
+
+    <section id="language">
+      <h2 data-i18n="languageHeading"></h2>
+      <div class="setting">
+        <div class="setting-text">
+          <label for="language-select" data-i18n="languageLabel"></label>
+          <p class="hint" data-i18n="languageHint"></p>
+        </div>
+        <span class="language-choice">
+          <span id="language-flag"></span>
+          <select id="language-select"></select>
+        </span>
+      </div>
+    </section>
+
+    <section id="scans">
+      <h2 data-i18n="lastScansHeading"></h2>
+      <div class="scan-grid">
+        <article id="scan-campaigns" class="scan">
+          <header class="scan-head">
+            <span class="scan-dot"></span>
+            <h3 data-i18n="openCampaigns"></h3>
+            <span class="scan-mode pill"></span>
+          </header>
+          <p class="scan-when"></p>
+          <ul class="scan-facts"></ul>
+          <ul class="scan-warnings"></ul>
+        </article>
+        <article id="scan-inventory" class="scan">
+          <header class="scan-head">
+            <span class="scan-dot"></span>
+            <h3 data-i18n="openInventory"></h3>
+            <span class="scan-mode pill"></span>
+          </header>
+          <p class="scan-when"></p>
+          <ul class="scan-facts"></ul>
+          <ul class="scan-warnings"></ul>
+        </article>
+      </div>
+    </section>
+    <section id="danger" class="danger-zone">
+      <h2 data-i18n="dangerHeading"></h2>
+      <div class="setting">
+        <div class="setting-text">
+          <label for="twitch-api" data-i18n="twitchApiLabel"></label>
+          <p class="hint" data-i18n="twitchApiHint"></p>
+        </div>
+        <input id="twitch-api" class="switch" type="checkbox" role="switch">
+      </div>
+      <div class="setting">
+        <div class="setting-text">
+          <label for="diagnostics" data-i18n="diagnosticsLabel"></label>
+          <p class="hint" data-i18n="diagnosticsHint"></p>
+        </div>
+        <input id="diagnostics" class="switch" type="checkbox" role="switch">
+      </div>
+      <div class="setting">
+        <div class="setting-text">
+          <span class="setting-name" data-i18n="wipeLocalLabel"></span>
+          <p id="wipe-local-hint" class="hint" data-i18n="wipeLocalHint"></p>
+        </div>
+        <button id="wipe-local" class="btn danger" type="button" aria-describedby="wipe-local-hint" data-i18n="wipeLocalButton"></button>
+      </div>
+      <div class="setting">
+        <div class="setting-text">
+          <span class="setting-name" data-i18n="wipeSyncLabel"></span>
+          <p id="wipe-sync-hint" class="hint" data-i18n="wipeSyncHint"></p>
+        </div>
+        <button id="wipe-sync" class="btn danger" type="button" aria-describedby="wipe-sync-hint" data-i18n="wipeSyncButton"></button>
+      </div>
+      <div class="setting">
+        <div class="setting-text">
+          <span class="setting-name" data-i18n="wipeAllLabel"></span>
+          <p id="wipe-all-hint" class="hint" data-i18n="wipeAllHint"></p>
+        </div>
+        <button id="wipe-all" class="btn danger" type="button" aria-describedby="wipe-all-hint" data-i18n="wipeAllButton"></button>
+      </div>
+      <p id="wipe-status" class="hint wipe-status" role="status"></p>
+    </section>
+    <p class="hint sheet-note" data-i18n="helpSettingsSaved"></p>
+  </main>
+  <footer>
+    <span>Copyright &copy; 2026 - Rathinosk™. <span data-i18n="unaffiliated"></span></span>
+    <span class="spacer"></span>
+    <a href="https://rathinosk.com" target="_blank" rel="noopener">rathinosk.com</a>
+    <a href="https://github.com/rathinosk/Dragnet-for-Twitch" target="_blank" rel="noopener" data-i18n="helpSource"></a>
+    <a href="https://github.com/rathinosk/Dragnet-for-Twitch/issues" target="_blank" rel="noopener" data-i18n="footerIssues"></a>
+  </footer>
+</body>
+</html>

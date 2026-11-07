@@ -1,0 +1,157 @@
+<!doctype html>
+<!-- SPDX-License-Identifier: GPL-3.0-or-later -->
+<!-- Copyright (C) 2026 Rathinosk -->
+<!-- Help page (opened from the popup and the full page). Text comes from _locales: help.js fills the data-i18n attributes (ui/i18n.js),
+     the sample badges and the version, and sets lang (common.js). -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="helpTitle"></title>
+  <link rel="icon" href="../icons/icon-32.png">
+  <link rel="stylesheet" href="dragnet.css">
+  <script type="module" src="help.js"></script>
+</head>
+<body data-view="help">
+  <header class="topbar">
+    <img class="logo" src="../icons/icon-32.png" alt="" width="24" height="24">
+    <h1 data-i18n="helpTitle"></h1>
+    <nav class="nav">
+      <a class="btn" href="https://www.twitch.tv/drops/campaigns" target="_blank" rel="noopener" data-i18n="openCampaigns" data-i18n-title="openCampaignsTitle"></a>
+      <a class="btn" href="https://www.twitch.tv/drops/inventory" target="_blank" rel="noopener" data-i18n="openInventory" data-i18n-title="openInventoryTitle"></a>
+    </nav>
+    <span class="spacer"></span>
+    <a class="icon-btn" href="settings.html" data-i18n-title="settingsTitle" data-i18n-aria-label="settingsTitle">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="2.2"/><path d="M6.9 1.5h2.2l.4 1.8 1.2.7 1.8-.6 1.1 1.9-1.4 1.3v1.4l1.4 1.3-1.1 1.9-1.8-.6-1.2.7-.4 1.8H6.9l-.4-1.8-1.2-.7-1.8.6-1.1-1.9 1.4-1.3V7.3L2.4 6l1.1-1.9 1.8.6 1.2-.7Z"/></svg>
+    </a>
+    <a id="language-button" class="icon-btn" href="settings.html#language"></a>
+    <a class="btn primary" href="page.html" data-i18n="helpBackToList"></a>
+  </header>
+  <main class="help">
+    <nav class="toc" data-i18n-aria-label="helpContents">
+      <a href="#what" data-i18n="helpWhatHeading"></a>
+      <a href="#when" data-i18n="helpWhenHeading"></a>
+      <a href="#list" data-i18n="helpListHeading"></a>
+      <a href="#filters" data-i18n="filtersHeading"></a>
+      <a href="#settings" data-i18n="helpSettingsHeading"></a>
+      <a href="#health" data-i18n="helpHealthHeading"></a>
+      <a href="#apis" data-i18n="helpApisHeading"></a>
+      <a href="#data" data-i18n="helpDataHeading"></a>
+    </nav>
+
+    <section id="what">
+      <h2 data-i18n="helpWhatHeading"></h2>
+      <p data-i18n="helpWhat1"></p>
+      <p data-i18n="helpWhat2"></p>
+    </section>
+
+    <section id="when">
+      <h2 data-i18n="helpWhenHeading"></h2>
+      <dl>
+        <dt data-i18n="helpVisitTerm"></dt>
+        <dd data-i18n="helpVisit"></dd>
+        <dt data-i18n="fullSync"></dt>
+        <dd data-i18n="helpFullSync"></dd>
+        <dt data-i18n="helpLeaveTerm"></dt>
+        <dd data-i18n="helpLeave"></dd>
+        <dt data-i18n="inventoryCheckLabel"></dt>
+        <dd data-i18n="helpInventoryCheck"></dd>
+      </dl>
+    </section>
+
+    <section id="list">
+      <h2 data-i18n="helpListHeading"></h2>
+      <p data-i18n="helpListIntro"></p>
+      <dl class="legend">
+        <dt><span id="sample-critical" class="pill critical"></span></dt>
+        <dd data-i18n="helpUrgencyCritical"></dd>
+        <dt><span id="sample-soon" class="pill soon"></span></dt>
+        <dd data-i18n="helpUrgencySoon"></dd>
+        <dt><span id="sample-later" class="pill"></span></dt>
+        <dd data-i18n="helpUrgencyLater"></dd>
+        <dt><span class="pill not-connected" data-i18n="notConnected"></span></dt>
+        <dd data-i18n="helpBadgeNotConnected"></dd>
+        <dt><span id="sample-claimable" class="pill claimable"></span></dt>
+        <dd data-i18n="helpBadgeClaimable"></dd>
+        <dt><span class="claim-progress"><span id="sample-bar" class="bar"><span></span></span><span id="sample-claimed"></span></span></dt>
+        <dd data-i18n="helpBadgeClaimed"></dd>
+      </dl>
+      <p data-i18n="helpDrops"></p>
+      <p data-i18n="helpDropsNotRead"></p>
+      <p data-i18n="helpStats"></p>
+      <p data-i18n="helpSearch"></p>
+      <p data-i18n="helpButtons"></p>
+    </section>
+
+    <section id="filters">
+      <h2 data-i18n="filtersHeading"></h2>
+      <p data-i18n="helpFiltersIntro"></p>
+      <dl>
+        <dt data-i18n="connectionFilterLabel"></dt>
+        <dd data-i18n="helpConnection"></dd>
+        <dt data-i18n="hideCompleteLabel"></dt>
+        <dd data-i18n="helpHideComplete"></dd>
+        <dt data-i18n="hideSubDropsLabel"></dt>
+        <dd data-i18n="helpHideSubDrops"></dd>
+        <dt data-i18n="gameFilterLabel"></dt>
+        <dd data-i18n="helpGames"></dd>
+      </dl>
+    </section>
+
+    <section id="settings">
+      <h2 data-i18n="helpSettingsHeading"></h2>
+      <dl>
+        <dt data-i18n="historyLabel"></dt>
+        <dd data-i18n="helpHistory"></dd>
+        <dt data-i18n="incrementalLabel"></dt>
+        <dd data-i18n="helpIncremental"></dd>
+        <dt data-i18n="autoClaimLabel"></dt>
+        <dd data-i18n="helpAutoClaim"></dd>
+        <dt data-i18n="inventoryCheckLabel"></dt>
+        <dd data-i18n="helpInventoryCheck"></dd>
+        <dt data-i18n="stallHeading"></dt>
+        <dd data-i18n="helpStall"></dd>
+        <dt data-i18n="languageHeading"></dt>
+        <dd data-i18n="helpLanguage"></dd>
+        <dt data-i18n="dangerHeading"></dt>
+        <dd data-i18n="helpDanger"></dd>
+      </dl>
+      <p data-i18n="helpSettingsSaved"></p>
+    </section>
+
+    <section id="health">
+      <h2 data-i18n="helpHealthHeading"></h2>
+      <p data-i18n="helpLastScans"></p>
+      <p data-i18n="helpBanner"></p>
+      <dl>
+        <dt data-i18n="helpBannerLayoutTerm"></dt>
+        <dd data-i18n="helpBannerLayout"></dd>
+        <dt data-i18n="helpBannerLocaleTerm"></dt>
+        <dd data-i18n="helpBannerLocale"></dd>
+      </dl>
+    </section>
+
+    <section id="apis">
+      <h2 data-i18n="helpApisHeading"></h2>
+      <p data-i18n="helpApis1"></p>
+      <p data-i18n="helpApis2"></p>
+      <p data-i18n="helpApis3"></p>
+    </section>
+
+    <section id="data">
+      <h2 data-i18n="helpDataHeading"></h2>
+      <p data-i18n="helpData1"></p>
+      <p data-i18n="helpData2"></p>
+      <p data-i18n="helpData3"></p>
+    </section>
+    <p class="hint sheet-note"><span data-i18n="helpAbout"></span> <span id="version"></span></p>
+  </main>
+  <footer>
+    <span>Copyright &copy; 2026 - Rathinosk™. <span data-i18n="unaffiliated"></span></span>
+    <span class="spacer"></span>
+    <a href="https://rathinosk.com" target="_blank" rel="noopener">rathinosk.com</a>
+    <a href="https://github.com/rathinosk/Dragnet-for-Twitch" target="_blank" rel="noopener" data-i18n="helpSource"></a>
+    <a href="https://github.com/rathinosk/Dragnet-for-Twitch/issues" target="_blank" rel="noopener" data-i18n="footerIssues"></a>
+  </footer>
+</body>
+</html>

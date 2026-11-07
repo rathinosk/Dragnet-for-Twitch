@@ -1,0 +1,27 @@
+# Signing keys: never commit
+*.pem
+*.key
+*.crx
+
+# Packaging output
+dist/
+.output/
+*.zip
+
+# OS / editor
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# Node modules
+node_modules/
+
+# Local Claude Code state
+.claude/settings.local.json
+
+# Snapshots
+test/snapshots/*
+.download/
+.download/*

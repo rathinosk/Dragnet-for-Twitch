@@ -1,0 +1,730 @@
+{
+  "localeCode": {
+    "message": "ja"
+  },
+  "extName": {
+    "message": "Dragnet for Twitch"
+  },
+  "extShortName": {
+    "message": "Dragnet"
+  },
+  "extDescription": {
+    "message": "Twitch のドロップキャンペーンと獲得の進み具合を終了日順に追跡します。Twitch とは無関係です。"
+  },
+  "actionTitle": {
+    "message": "Dragnet"
+  },
+  "fullSync": {
+    "message": "完全同期"
+  },
+  "fullSyncTitle": {
+    "message": "Twitch のドロップページを新しいタブで開き、すべて読み取ります"
+  },
+  "statusNoScan": {
+    "message": "まだ読み取りがありません。Twitch のドロップキャンペーンページを開くか、「完全同期」を押してください。"
+  },
+  "storageError": {
+    "message": "ストレージを読み取れませんでした。"
+  },
+  "campaignCount_other": {
+    "message": "{count} 件のキャンペーン"
+  },
+  "campaignCountHidden_other": {
+    "message": "{count} 件のキャンペーン（フィルターで {hidden} 件非表示）"
+  },
+  "scanFull": {
+    "message": "完全同期"
+  },
+  "scanVisit": {
+    "message": "訪問時"
+  },
+  "scanCardsOpened_other": {
+    "message": "{count} 枚中 {opened} 枚のカードを開いた"
+  },
+  "scanInterrupted": {
+    "message": "中断"
+  },
+  "scanLoadMore_other": {
+    "message": "Load More {count} 回"
+  },
+  "scanReachedKnown": {
+    "message": "既知の受け取りで停止"
+  },
+  "scanGqlCampaigns": {
+    "message": "Twitch データ（詳細: {count}、追加したドロップ: {added}）"
+  },
+  "scanGqlInventory": {
+    "message": "Twitch データ（正確な受け取り時刻: {count}）"
+  },
+  "scanNotRead": {
+    "message": "未読み取り"
+  },
+  "scanNoWarnings": {
+    "message": "警告なし"
+  },
+  "healthIntro": {
+    "message": "Twitch のページを想定どおりに読み取れませんでした。保存済みのデータはそのままです。"
+  },
+  "warnLocaleUnsupported": {
+    "message": "Twitch が Dragnet でまだ読み取れない言語（{lang}）で表示されています。読み取るには Twitch を英語に切り替えてください。"
+  },
+  "endsAt": {
+    "message": "{date} に終了"
+  },
+  "hoursLeft_other": {
+    "message": "残り {count} 時間"
+  },
+  "daysLeft_other": {
+    "message": "残り {count} 日"
+  },
+  "durationHoursMinutes": {
+    "message": "{h} 時間 {m} 分"
+  },
+  "durationHours": {
+    "message": "{h} 時間"
+  },
+  "durationMinutes": {
+    "message": "{m} 分"
+  },
+  "subsRequired_other": {
+    "message": "サブスク {count} 件"
+  },
+  "subsUnknown": {
+    "message": "サブスク"
+  },
+  "progressOfMinutes": {
+    "message": "{percent}%（{total} 中 {done}）"
+  },
+  "progressPercent": {
+    "message": "{percent}%"
+  },
+  "stateClaimed": {
+    "message": "受け取り済み"
+  },
+  "stateClaimNow": {
+    "message": "今すぐ受け取る"
+  },
+  "watchOn": {
+    "message": "対象:"
+  },
+  "watchOr": {
+    "message": "または"
+  },
+  "moreChannels": {
+    "message": "その他のチャンネル"
+  },
+  "anyChannel": {
+    "message": "ドロップ対応の全チャンネル"
+  },
+  "notConnected": {
+    "message": "未連携"
+  },
+  "connect": {
+    "message": "連携する"
+  },
+  "noDrops": {
+    "message": "ドロップはありません。"
+  },
+  "dropsNotRead": {
+    "message": "ドロップはまだ読み取られていません。"
+  },
+  "openCampaigns": {
+    "message": "キャンペーン"
+  },
+  "openInventory": {
+    "message": "インベントリ"
+  },
+  "filtersHeading": {
+    "message": "フィルター"
+  },
+  "connectionFilterLabel": {
+    "message": "ゲームアカウント"
+  },
+  "connectionFilterAll": {
+    "message": "すべて表示"
+  },
+  "connectionFilterHide": {
+    "message": "未連携を非表示"
+  },
+  "connectionFilterOnly": {
+    "message": "未連携のみ"
+  },
+  "gameFilterLabel": {
+    "message": "ゲーム"
+  },
+  "gameFilterHide": {
+    "message": "チェックしたものを非表示"
+  },
+  "gameFilterInclude": {
+    "message": "チェックしたものだけ表示"
+  },
+  "historyLabel": {
+    "message": "受け取り済みドロップの履歴"
+  },
+  "historyHint": {
+    "message": "完全同期で Twitch の受け取り済みドロップ一覧をどこまでさかのぼって読むか。それより古い受け取りは保持されません。"
+  },
+  "historyDays_other": {
+    "message": "{count} 日"
+  },
+  "historyWeeks_other": {
+    "message": "{count} 週間"
+  },
+  "historyMonths_other": {
+    "message": "{count} か月"
+  },
+  "incrementalLabel": {
+    "message": "古いキャンペーンを読み直す"
+  },
+  "incrementalHint": {
+    "message": "キャンペーンページを訪問するたびに、最も前に読み取ったキャンペーンも読み直し、追加されたドロップや新しく連携したアカウントを反映します。"
+  },
+  "incrementalCountLabel": {
+    "message": "1 回の訪問で読み直す数"
+  },
+  "autoClaimLabel": {
+    "message": "ドロップを自動で受け取る"
+  },
+  "autoClaimHint": {
+    "message": "インベントリページが開いているときに「Claim Now」をクリックします。"
+  },
+  "autoClaimUnavailable": {
+    "message": "（Twitch の「Claim Now」ボタンを確認・テストするまで利用できません）"
+  },
+  "inventoryCheckLabel": {
+    "message": "インベントリの定期確認"
+  },
+  "inventoryCheckHint": {
+    "message": "この間隔でインベントリを読み取ります。開いているインベントリのタブを再読み込みするか、バックグラウンドでタブを開いて読み取り後に閉じます。自動受け取りがオンなら「Claim Now」もクリックします。"
+  },
+  "dropAlertLabel": {
+    "message": "ドロップの準備ができたらインベントリを確認",
+    "description": "Drop alert switch label (settings, Scanning)."
+  },
+  "dropAlertHint": {
+    "message": "チャンネルページの「Drops & More」ボタンに新着ドットが表示されたとき（またはドロップの通知が出たとき）、定期チェックと同様にインベントリをすぐ開いて、または再読み込みして読み取ります。10分に1回まで。初期設定はオフです。",
+    "description": "Hint under the drop alert switch; quotes Twitch button name Drops & More."
+  },
+  "inventoryCheckOff": {
+    "message": "オフ"
+  },
+  "inventoryCheckMinutes_other": {
+    "message": "{count} 分ごと"
+  },
+  "inventoryCheckHours_other": {
+    "message": "{count} 時間ごと"
+  },
+  "stallHeading": {
+    "message": "停止の検出"
+  },
+  "stallDetectLabel": {
+    "message": "進行が止まったら知らせる"
+  },
+  "stallDetectHint": {
+    "message": "Twitch は、再生が続いている配信でも視聴時間を数えなくなることがあり、ページを再読み込みするまで直りません。ゲームのドロップ有効な配信の再生中に、ドロップが 20 分間進まなかった場合に Dragnet が知らせます。インベントリの定期確認と併用すると効果的です。"
+  },
+  "stallReloadLabel": {
+    "message": "配信を自動で再読み込み"
+  },
+  "stallReloadHint": {
+    "message": "最大で 30 分に 1 回。見ているタブは再読み込みしません。"
+  },
+  "stallReloadActiveLabel": {
+    "message": "視聴中のタブも対象にする"
+  },
+  "stallReloadMaxLabel": {
+    "message": "諦めるまでの回数"
+  },
+  "stallReloadMaxHint": {
+    "message": "進行がないまま連続で再読み込みする回数。これを超えると Dragnet はその配信の再読み込みをやめます。"
+  },
+  "stallReloadMaxOption_other": {
+    "message": "{count} 回"
+  },
+  "stallAlert": {
+    "message": "{channel} でドロップの進行が止まっています。"
+  },
+  "stallReloadButton": {
+    "message": "配信を再読み込み"
+  },
+  "stallGaveUp_other": {
+    "message": "{channel} では {count} 回再読み込みしてもドロップの進行が数えられていません。"
+  },
+  "stallFindStreams": {
+    "message": "ドロップ有効な配信"
+  },
+  "stallDismiss": {
+    "message": "閉じる"
+  },
+  "badgeReadingCampaigns": {
+    "message": "Dragnet: キャンペーンを読み取り中 {n}/{total}"
+  },
+  "badgeReadingClaims": {
+    "message": "Dragnet: 受け取り済みドロップを読み取り中（現在 {count} 件）"
+  },
+  "badgeClaiming": {
+    "message": "Dragnet: ドロップを受け取り中"
+  },
+  "searchPlaceholder": {
+    "message": "ゲーム、キャンペーン、報酬、チャンネルを検索"
+  },
+  "searchLabel": {
+    "message": "検索"
+  },
+  "searchCount_other": {
+    "message": "{total} 件中 {count} 件のキャンペーンが一致"
+  },
+  "statusSynced": {
+    "message": "{ago}に更新"
+  },
+  "groupByLabel": {
+    "message": "キャンペーンのグループ化"
+  },
+  "groupByExpiry": {
+    "message": "終了順"
+  },
+  "groupByGame": {
+    "message": "ゲーム別"
+  },
+  "emptySearch": {
+    "message": "検索に一致するキャンペーンはありません。"
+  },
+  "emptyFiltered": {
+    "message": "フィルターですべてのキャンペーンが非表示になっています。"
+  },
+  "emptyNone": {
+    "message": "実施中のキャンペーンはありません。"
+  },
+  "minutesLeft_other": {
+    "message": "残り {count} 分"
+  },
+  "readyToClaim_other": {
+    "message": "{count} 件受け取り可能"
+  },
+  "claimedOf_other": {
+    "message": "{claimed}/{count} 受け取り済み"
+  },
+  "claimedOn": {
+    "message": "{date} ごろ受け取り"
+  },
+  "notConnectedHint": {
+    "message": "これらのドロップを受け取るには、ゲームアカウントを連携してください。"
+  },
+  "aboutCampaign": {
+    "message": "このキャンペーンについて"
+  },
+  "dropsEnabledChannels": {
+    "message": "ドロップが有効なライブチャンネル"
+  },
+  "warnSelectorMissing": {
+    "message": "Twitch のページレイアウトが変わりました（{hook} が見つかりません）。"
+  },
+  "warnNoCards": {
+    "message": "ページにキャンペーンカードが見つかりませんでした。"
+  },
+  "warnGqlAbsent": {
+    "message": "Twitch ページのデータが届きませんでした。Twitch のタブを再読み込みしてください（「Twitch ページのデータ」をオンにした後に一度必要です）。"
+  },
+  "warnGqlUnrecognized": {
+    "message": "Twitch ページのデータを認識できませんでした（{op}）。ページはそれを使わずに読み取りました。"
+  },
+  "openFullView": {
+    "message": "タブで開く"
+  },
+  "settingsTitle": {
+    "message": "設定"
+  },
+  "settingsPageTitle": {
+    "message": "Dragnet の設定"
+  },
+  "languageButton": {
+    "message": "言語: {name}"
+  },
+  "languageHeading": {
+    "message": "言語"
+  },
+  "languageLabel": {
+    "message": "表示言語"
+  },
+  "languageAuto": {
+    "message": "自動（{name}）"
+  },
+  "languageHint": {
+    "message": "「自動」は Chrome の言語に従います。Chrome のメニューに表示される拡張機能名は常に Chrome の言語に従います。"
+  },
+  "hideCompleteLabel": {
+    "message": "完了したキャンペーンを非表示"
+  },
+  "hideSubDropsLabel": {
+    "message": "サブスクドロップを非表示"
+  },
+  "gameSearchPlaceholder": {
+    "message": "ゲームを検索"
+  },
+  "gamesClear": {
+    "message": "クリア"
+  },
+  "scanningHeading": {
+    "message": "読み取り"
+  },
+  "lastScansHeading": {
+    "message": "最近の読み取り"
+  },
+  "unaffiliated": {
+    "message": "Twitch とは無関係です。"
+  },
+  "openCampaignsTitle": {
+    "message": "Twitch のドロップキャンペーンページを開く"
+  },
+  "openInventoryTitle": {
+    "message": "Twitch のドロップインベントリページを開く"
+  },
+  "helpButton": {
+    "message": "ヘルプ"
+  },
+  "helpTitle": {
+    "message": "Dragnet ヘルプ"
+  },
+  "helpBackToList": {
+    "message": "キャンペーン一覧"
+  },
+  "helpContents": {
+    "message": "目次"
+  },
+  "helpWhatHeading": {
+    "message": "Dragnet でできること"
+  },
+  "helpWhat1": {
+    "message": "Dragnet は、現在実施中の Twitch ドロップキャンペーンと、各ドロップの進み具合を終了の早い順に一覧にします。ログイン中に Twitch が表示する 2 つのドロップページ、「キャンペーン」と「インベントリ」をそのまま読み取ります。"
+  },
+  "helpWhat2": {
+    "message": "独自のネットワーク通信は行いません。ブラウザーが読み込んだページを、あなた（または完全同期）が開いたときに読み取るだけです。"
+  },
+  "helpWhenHeading": {
+    "message": "読み取るタイミング"
+  },
+  "helpVisitTerm": {
+    "message": "訪問のたびに"
+  },
+  "helpVisit": {
+    "message": "Twitch のドロップキャンペーンページやインベントリを開くたびに、Dragnet は手早く読み取ります。キャンペーンページでは未読のキャンペーンだけを開き、インベントリでは進み具合と最新の受け取り済みドロップを読み取り、既に知っている受け取りに達するまでだけ履歴を追加で読み込みます。キャンペーンを開いている間は、Twitch のページに小さなラベルが表示されます。"
+  },
+  "helpFullSync": {
+    "message": "キャンペーンページを新しいタブで開いてすべてのキャンペーンを読み取り、続いてインベントリに移って履歴設定の期間まで受け取り履歴を読み取ってから、タブを閉じます。1～2 分かかります。Chrome はバックグラウンドのタブを遅くするので、その間タブを前面に置いてください。インストール後や、一覧が古く見えるときに使ってください。"
+  },
+  "helpLeaveTerm": {
+    "message": "途中で離れた場合"
+  },
+  "helpLeave": {
+    "message": "読み取りが終わる前にドロップページを離れても、それまでに読み取った分は保存され、残りは次回読み取られます。"
+  },
+  "helpListHeading": {
+    "message": "一覧の見方"
+  },
+  "helpListIntro": {
+    "message": "各カードは 1 つのゲームで、そのゲームの現在のキャンペーンをすべて含みます。クリックするとドロップが表示されます。カードの残り時間は次に終了する未受け取りドロップのもので、未受け取りの各ドロップにはそれぞれの残り時間が表示されます。ポップアップでは進行中または受け取り可能なドロップがあるキャンペーンだけを開き、全画面ページではすべてを開きます。色付きラベルの意味:"
+  },
+  "helpUrgencyCritical": {
+    "message": "24 時間以内に終了。カードまたはドロップの縁が赤になります。"
+  },
+  "helpUrgencySoon": {
+    "message": "3 日以内に終了。カードまたはドロップの縁が琥珀色になります。"
+  },
+  "helpUrgencyLater": {
+    "message": "それ以降に終了。ラベルにポインターを合わせると正確な終了日時が表示されます。"
+  },
+  "helpBadgeNotConnected": {
+    "message": "このキャンペーンにゲームアカウントが連携されていないため、ドロップを受け取れません。カードを開き、「連携する」から販売元のサイトで連携してください。"
+  },
+  "helpBadgeClaimable": {
+    "message": "ドロップが完了し、受け取りを待っています。Twitch のインベントリページで受け取ってください（ドロップの「今すぐ受け取る」ボタンで開きます）。"
+  },
+  "helpBadgeClaimed": {
+    "message": "キャンペーンのドロップのうち受け取った数です。すべて受け取るとバーが緑になります。"
+  },
+  "helpDrops": {
+    "message": "各ドロップには、必要な条件（視聴時間またはサブスク）と対象（指定のチャンネル、またはドロップを有効にしてそのゲームを配信している任意のチャンネル）が表示されます。Twitch のインベントリに進み具合が出ると進捗バーが、受け取ると「受け取り済み」が表示されます。受け取り済みのドロップは、Twitch の一覧から消えても受け取り済みのままです。"
+  },
+  "helpDropsNotRead": {
+    "message": "「ドロップはまだ読み取られていません。」は、Dragnet がキャンペーンを確認したもののカードをまだ開いていないことを意味します。キャンペーンページを開くか、完全同期を実行してください。"
+  },
+  "helpSearch": {
+    "message": "検索では、入力した各語をゲーム、キャンペーン、販売元、ドロップ、報酬、チャンネルと照合します（大文字小文字やアクセントは区別しません）。「終了順」は終了日順に並べ、「ゲーム別」は最も早く終了するゲームから順にまとめます。"
+  },
+  "helpButtons": {
+    "message": "「キャンペーン」と「インベントリ」は Twitch の各ページを開きます。じょうごはフィルターを表示し、歯車は設定を開き、丸い旗は言語設定を開き、疑問符はこのヘルプを開きます。ポップアップでは、矢印ボタンで一覧を専用のタブに開きます。"
+  },
+  "helpFiltersIntro": {
+    "message": "フィルターは表示を変えるだけです。Dragnet はすべてのキャンペーンを読み取って保存し続けるので、フィルターを変えても再読み取りは不要です。じょうごボタンでフィルターを表示・非表示にします。ボタンに点が付いているときは、フィルターが開いています。"
+  },
+  "helpConnection": {
+    "message": "すべてのキャンペーンを表示、ゲームアカウントが未連携のものを非表示、または連携すべきアカウントの ToDo リストとして未連携のものだけを表示します。カードをまだ読み取っていないキャンペーンは、未連携とは見なされません。"
+  },
+  "helpHideComplete": {
+    "message": "完了したキャンペーンを非表示にします。"
+  },
+  "helpHideSubDrops": {
+    "message": "サブスクが必要なドロップを非表示にします。ほかのドロップがないキャンペーンは非表示になり、未受け取りのドロップがサブスク必須のものだけのキャンペーンは完了扱いになります。"
+  },
+  "helpGames": {
+    "message": "一覧でゲームにチェックを入れ、「チェックしたものを非表示」か「チェックしたものだけ表示」を選びます。「チェックしたものだけ表示」で何もチェックしていない場合は、すべて表示されます。キャンペーンが終了したゲームも、チェックを外すまでチェックされたまま一覧に残ります。「クリア」ですべてのチェックを外します。"
+  },
+  "helpSettingsHeading": {
+    "message": "設定"
+  },
+  "helpHistory": {
+    "message": "Twitch の受け取り済みドロップ一覧を、インベントリの読み取りでどこまでさかのぼるか（1 週間～3 か月）。長くすると古い受け取りまで届きますが、完全同期で「Load More」のクリックが増えます。通常の訪問では、既に知っている受け取りに達した時点で早めに止まります。それより古い受け取りは Dragnet の履歴から削除されます。"
+  },
+  "helpIncremental": {
+    "message": "Twitch は実施中のキャンペーンにドロップを追加することがあり、また Dragnet がカードを読んだ後にゲームアカウントを連携することもあります。これをオンにすると、キャンペーンページを訪問するたびに、最も前に読み取った 3、5、または 10 件のキャンペーンも読み直します（最大 15 分に 1 回）。こうした変化は完全同期なしで数回の訪問のうちに反映されます。未連携のキャンペーンはより頻繁に順番が回ってきます。"
+  },
+  "helpAutoClaim": {
+    "message": "オンにすると、インベントリページの訪問（または完全同期）時に、ページを読み取る前に各「Claim Now」ボタンをクリックします。ドロップが受け取られるのは、インベントリページが開いている間だけです。既定ではオフです。"
+  },
+  "helpInventoryCheck": {
+    "message": "既定ではオフです。15 分から 4 時間ごとに、Dragnet は開いているインベントリページ（見ているページは除く）を再読み込みするか、バックグラウンドのタブで開いて読み取り後に閉じます。訪問時と同じように読み取り、自動受け取りがオンなら「Claim Now」をクリックするので、インベントリを開いていなくてもドロップを受け取れます。完全同期を除けば、Dragnet が自分で Twitch のタブを開くのはこのときだけです。"
+  },
+  "helpStall": {
+    "message": "既定ではオンです。Twitch は、再生が続いている配信でも視聴時間を数えなくなることがあり、ページを再読み込みすると直ります。チャンネルのタブが開いている間、Dragnet はそのチャンネルとゲーム、ドロップが有効か、再生中かを記録し（ブラウザーを閉じるまでのみ保持）、インベントリを読み取るたびに比較します。そのゲームの進行中のドロップがどれも 20 分間進まなかった場合、ツールバーのボタンに「!」が表示され、一覧にチャンネル名と「配信を再読み込み」ボタンが表示されます。オプションで Dragnet がタブを自動で再読み込みします（最大 30 分に 1 回）。選んだ回数だけ再読み込みしても進まない場合はやめて、そのゲームのドロップ有効な配信へのリンクを表示します。チャンネルを選んだり切り替えたりすることはありません。"
+  },
+  "helpLanguage": {
+    "message": "ここで選ばない限り、Dragnet のページは Chrome の言語に従います。上部バーの丸い旗は使用中の言語を示し、この設定を開きます。Dragnet が読み取れるよう、Twitch 自体は英語のままにしてください。"
+  },
+  "helpSettingsSaved": {
+    "message": "設定とゲームフィルターは Chrome の同期ストレージに保存されるため、Chrome の同期がオンなら Chrome プロフィールと一緒にほかのパソコンにも引き継がれます。"
+  },
+  "helpHealthHeading": {
+    "message": "最近の読み取りと警告"
+  },
+  "helpLastScans": {
+    "message": "設定ページの下部にある「最近の読み取り」には、Twitch の各ページのカードがあります。最後に読み取った日時、それが訪問時か完全同期か、開いたキャンペーンカードの数または「Load More」をクリックした回数、そして警告です。点は、問題なければ緑、警告があれば黄、警告で読み取りが止まった場合は赤です。"
+  },
+  "helpBanner": {
+    "message": "上部の赤いバナーは、Twitch のページが想定と違っていたため読み取りが止まったことを示します。保存済みの一覧はそのまま残ります。対処方法:"
+  },
+  "helpBannerLayoutTerm": {
+    "message": "ページのレイアウトが変わった、またはキャンペーンカードが見つからない"
+  },
+  "helpBannerLayout": {
+    "message": "Twitch のページを一度再読み込みしてください。読み込みが遅かったり途中までだったりすることがあります。警告が消えない場合は Twitch がページを変更しており、Dragnet の更新が必要です。"
+  },
+  "helpBannerLocaleTerm": {
+    "message": "Dragnet がまだ読み取れない言語"
+  },
+  "helpBannerLocale": {
+    "message": "Dragnet は英語の Twitch を読み取ります。Twitch の言語を英語にして（Twitch のプロフィールメニューの「言語」）、ページを開き直してください。Dragnet 自体の言語は設定ページで選べます。"
+  },
+  "helpApisHeading": {
+    "message": "Twitch の API について",
+    "description": "Help section heading."
+  },
+  "helpApis1": {
+    "message": "Twitch の公開ドキュメント済み API（Helix）は使えますが、ドロップに関するデータがないため、Dragnet は現在呼び出していません。Dragnet は、すでに開いているドロップのページを読み取ります。",
+    "description": "Help: Helix (the documented public API) is allowed but not used today."
+  },
+  "helpApis2": {
+    "message": "Dragnet が Twitch の非公開 GraphQL API にリクエストを送ることはありません。このインターフェースの多用は、ドロップが一時停止される原因になり得る種類のトラフィックです。",
+    "description": "Help: no requests to the undocumented GraphQL API."
+  },
+  "helpApis3": {
+    "message": "Twitch ページのデータ（設定、Danger Zone。既定ではオフ）をオンにした場合のみ、Twitch のドロップページがすでに受け取った GraphQL レスポンスのコピーを、読み取り専用で読み取ります。独自の呼び出しは行わず、トークンや Cookie も読み取りません。",
+    "description": "Help: the read-only Twitch page data switch."
+  },
+  "helpDataHeading": {
+    "message": "データについて"
+  },
+  "helpData1": {
+    "message": "Dragnet が読み取ったものはすべてこのブラウザー内にとどまります。サーバーはなく、どこにも何も送信しません。読み取れるのは www.twitch.tv のページだけです。"
+  },
+  "helpData2": {
+    "message": "キャンペーン、進み具合、受け取り履歴は拡張機能のローカルストレージに保存されます。これは Twitch のページに表示される内容のコピーで、次回の訪問や完全同期で作り直されます。"
+  },
+  "helpData3": {
+    "message": "拡張機能を削除すると、これらはすべて消去されます。"
+  },
+  "helpAbout": {
+    "message": "GNU GPL 3.0 以降のライセンスによるフリーソフトウェアです。Twitch とは無関係であり、Twitch による承認や後援も受けていません。"
+  },
+  "helpSource": {
+    "message": "ソースコード"
+  },
+  "footerIssues": {
+    "message": "問題を報告"
+  },
+  "helpVersion": {
+    "message": "バージョン {version}"
+  },
+  "dangerHeading": {
+    "message": "危険ゾーン"
+  },
+  "twitchApiLabel": {
+    "message": "Twitch ページのデータ（読み取り専用）",
+    "description": "Danger Zone switch label: read the Twitch page data the drops pages load (settings.twitchApi)."
+  },
+  "twitchApiHint": {
+    "message": "Twitch のドロップページ自身が Twitch の非公開 GraphQL エンドポイントから読み込むデータも、読み取り専用で読み取ります: 正確な時刻と進行状況、Load More なしの受け取り履歴、ページの読み取りで漏れるドロップ、新しいドロップが加わったキャンペーン。Dragnet はページがすでに受け取った内容をコピーするだけで、このエンドポイントへリクエストを送ることはありません。変更後は開いている Twitch のタブを再読み込みしてください。既定ではオフ。",
+    "description": "Hint under the Twitch page data switch."
+  },
+  "diagnosticsLabel": {
+    "message": "診断"
+  },
+  "diagnosticsHint": {
+    "message": "フィルターボタンの横に診断ボタンを表示します。開いている Twitch ドロップのタブを調べてスナップショットを保存するページです。また、Dragnet が認識できない Twitch のマークアップのコピーを保存します。トラブルシューティング用で、既定ではオフです。"
+  },
+  "diagnosticsTitle": {
+    "message": "診断"
+  },
+  "wipeLocalLabel": {
+    "message": "ローカルデータを削除"
+  },
+  "wipeLocalHint": {
+    "message": "このコンピューター上のキャンペーン、進行状況、受け取り履歴、前回のスキャン、診断キャプチャ。次回の訪問またはフル同期で再構築されます（インベントリに表示されなくなった古い受け取り履歴を除く）。"
+  },
+  "wipeLocalButton": {
+    "message": "ローカルを削除"
+  },
+  "wipeLocalConfirm": {
+    "message": "このコンピューターからキャンペーン、進行状況、受け取り履歴、診断キャプチャを削除しますか？元に戻せません。"
+  },
+  "wipeSyncLabel": {
+    "message": "同期データを削除"
+  },
+  "wipeSyncHint": {
+    "message": "設定とゲームフィルターが既定値に戻ります。Chrome 同期がオンの場合、他のコンピューターでもリセットされます。"
+  },
+  "wipeSyncButton": {
+    "message": "同期を削除"
+  },
+  "wipeSyncConfirm": {
+    "message": "この Chrome プロファイルと同期しているすべてのコンピューターで、すべての設定とゲームフィルターを既定値に戻しますか？元に戻せません。"
+  },
+  "wipeAllLabel": {
+    "message": "Dragnet のデータをすべて削除"
+  },
+  "wipeAllHint": {
+    "message": "上の両方：Dragnet が保存したすべてのデータ（ローカルと同期）。"
+  },
+  "wipeAllButton": {
+    "message": "すべて削除"
+  },
+  "wipeAllConfirm": {
+    "message": "同期しているすべてのコンピューターの設定とゲームフィルターを含め、Dragnet のデータをすべて削除しますか？元に戻せません。"
+  },
+  "wipeDone": {
+    "message": "削除しました。"
+  },
+  "wipeFailed": {
+    "message": "削除できませんでした。ブラウザーのコンソールを確認してください。"
+  },
+  "helpDanger": {
+    "message": "設定ページの一番下にあります。「Twitch ページのデータ」は、Twitch のドロップページ自身が読み込むデータも読み取ります（正確な時刻と進行状況、すべての受け取り履歴、ページの読み取りで漏れるドロップ）。Twitch へは何も送信しません。「診断」はトラブルシューティング用のツールをオンにします（既定ではオフ）。削除ボタンは Dragnet のローカルデータ（キャンペーン、進行状況、受け取り履歴）、同期データ（設定とゲームフィルター）、またはその両方を消去します。どれも実行前に確認します。"
+  },
+  "statsHeading": {
+    "message": "統計",
+    "description": "Heading of the Statistics panel on the full page."
+  },
+  "statsCampaignsHeading": {
+    "message": "キャンペーン",
+    "description": "Statistics panel: heading of the campaign counts."
+  },
+  "statsCampaigns": {
+    "message": "開催中のキャンペーン",
+    "description": "Statistics panel: number of active campaigns."
+  },
+  "statsGames": {
+    "message": "ゲーム",
+    "description": "Statistics panel: number of games with an active campaign."
+  },
+  "statsCampaignsInProgress": {
+    "message": "進行中のキャンペーン",
+    "description": "Statistics panel: campaigns with at least one drop in progress."
+  },
+  "statsDropsInProgress": {
+    "message": "進行中のドロップ",
+    "description": "Statistics panel: drops being watched toward."
+  },
+  "statsDropsClaimable": {
+    "message": "受け取り可能",
+    "description": "Statistics panel: drops at 100% waiting to be claimed."
+  },
+  "statsEnding24h": {
+    "message": "24時間以内に終了",
+    "description": "Statistics panel: campaigns whose next unclaimed drop ends within a day."
+  },
+  "statsEnding7d": {
+    "message": "7日以内に終了",
+    "description": "Statistics panel: campaigns whose next unclaimed drop ends within a week (includes the 24 hour ones)."
+  },
+  "statsOfAll": {
+    "message": "{all} 件中 {shown} 件",
+    "description": "Statistics panel: a count under the filters against the count of all. {shown}: under the filters; {all}: all active campaigns."
+  },
+  "statsClaimsHeading": {
+    "message": "受け取り済みドロップ",
+    "description": "Statistics panel: heading of the claimed-drops counts."
+  },
+  "statsClaimsTotal": {
+    "message": "履歴の合計",
+    "description": "Statistics panel: all claims in the claim history."
+  },
+  "statsClaims7": {
+    "message": "過去7日間",
+    "description": "Statistics panel: claims in the last 7 days."
+  },
+  "statsClaims30": {
+    "message": "過去30日間",
+    "description": "Statistics panel: claims in the last 30 days."
+  },
+  "statsChartLabel": {
+    "message": "1日あたりの受け取り数（過去{days}日間）",
+    "description": "Statistics panel: accessible name of the bar chart. {days}: days shown."
+  },
+  "statsChartDay": {
+    "message": "{date}: {count}",
+    "description": "Statistics panel: tooltip of one bar. {date}: the day; {count}: claims that day."
+  },
+  "statsChartMax": {
+    "message": "最大 {max}",
+    "description": "Statistics panel: the chart's tallest bar, between the first and last date. {max}: claims on the busiest day."
+  },
+  "statsNoClaims": {
+    "message": "履歴にはまだ受け取りがありません。",
+    "description": "Statistics panel: shown instead of the chart when the history is empty."
+  },
+  "helpStats": {
+    "message": "フルページ上部の統計パネルには、開催中のキャンペーンとゲームの数、進行中および受け取り可能なドロップ、24時間以内・7日以内に終了するキャンペーン、過去7日間と30日間の受け取り数（日別の棒グラフ付き）が表示されます。フィルターで一部のキャンペーンが非表示の場合は、両方の数が表示されます（「5 件中 3 件」）。受け取り数は履歴から集計され、履歴の設定で決めた日数分しか保持されません。",
+    "description": "Help: the Statistics panel."
+  },
+  "aboutTitle": {
+    "message": "Dragnet について",
+    "description": "About page: title and heading."
+  },
+  "aboutDescription": {
+    "message": "Twitchのドロップキャンペーンと受け取りの進捗を、終了日順に表示します。すでに開いているドロップのページを読み取るだけで、Twitchの非公開APIは呼び出しません。",
+    "description": "About page: what the extension does."
+  },
+  "aboutLinksHeading": {
+    "message": "リンク",
+    "description": "About page: heading of the links list."
+  },
+  "aboutReadme": {
+    "message": "README",
+    "description": "About page: link to the README."
+  },
+  "aboutPrivacy": {
+    "message": "プライバシーポリシー",
+    "description": "About page: link to the privacy policy."
+  },
+  "aboutLicense": {
+    "message": "ライセンス（GPL-3.0以降）",
+    "description": "About page: link to the licence text."
+  },
+  "aboutChangelogHeading": {
+    "message": "変更履歴",
+    "description": "About page: heading of the changelog. The entries themselves are English only."
+  },
+  "aboutChangelogEmpty": {
+    "message": "まだリリースはありません。",
+    "description": "About page: shown when the changelog has no entries."
+  }
+}

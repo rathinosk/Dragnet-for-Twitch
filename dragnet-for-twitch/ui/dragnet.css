@@ -1,0 +1,1564 @@
+/* SPDX-License-Identifier: GPL-3.0-or-later */
+/* Copyright (C) 2026 Rathinosk */
+/* Shared styles for the popup (body[data-view=popup]), the full page (page), the settings
+   page (settings) and help (help). Colours are tokens, redefined for dark mode. */
+
+:root {
+  color-scheme: light dark;
+  --bg: #f6f5f8;
+  --surface: #ffffff;
+  --surface-2: #f0eef4;
+  --text: #1c1a22;
+  --muted: #6a6675;
+  --border: #e2dfe8;
+  --accent: #7c3aed;
+  --accent-dark: #5b21b6;
+  --accent-text: #ffffff;
+  --accent-soft: #efe7fd;
+  --danger: #c0262d;
+  --danger-soft: #fde8e9;
+  --warn: #a35a00;
+  --warn-soft: #fdf1df;
+  --ok: #1d7a3a;
+  --ok-soft: #e3f4e8;
+  --radius: 8px;
+  --topbar-height: 54px;
+  --footer-height: 40px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121116;
+    --surface: #1c1b22;
+    --surface-2: #26242e;
+    --text: #ebe9f0;
+    --muted: #9c98a8;
+    --border: #2f2c38;
+    --accent: #a78bfa;
+    --accent-dark: #492780;
+    --accent-text: #160b2e;
+    --accent-soft: #2c2346;
+    --danger: #ff7b80;
+    --danger-soft: #3a1c1f;
+    --warn: #f3b562;
+    --warn-soft: #362716;
+    --ok: #6fd28e;
+    --ok-soft: #17301f;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* On body, not :root: Chrome's own stylesheet for extension pages sets the body's font
+   (75% size), which would override an inherited one. */
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+body[data-view="popup"] {
+  width: 560px;
+  max-height: 600px;
+}
+
+a {
+  color: var(--accent);
+}
+
+[hidden] {
+  display: none !important;
+}
+
+h1 {
+  font-size: 19px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--muted);
+  margin: 0 0 8px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.hint {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+/* Controls */
+
+button, select, input {
+  font: inherit;
+  color: inherit;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background: var(--surface-2);
+}
+
+.btn.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-text);
+  font-weight: 600;
+}
+
+.btn.primary:hover {
+  filter: brightness(1.08);
+}
+
+.btn:disabled {
+  opacity: .55;
+  cursor: default;
+}
+
+.btn.danger {
+  border-color: var(--danger);
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.btn.danger:hover {
+  background: var(--danger);
+  color: var(--surface);
+}
+
+.btn.small {
+  padding: 2px 8px;
+  font-size: 15px;
+}
+
+.btn svg, .icon-btn svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.icon-btn {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: none;
+  cursor: pointer;
+  color: var(--muted);
+}
+
+.icon-btn:hover, .icon-btn[aria-expanded="true"] {
+  background: var(--surface-2);
+  color: var(--text);
+}
+
+/* Round flag of the UI language (ui/flags.js). */
+.flag {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px var(--border);
+  flex: none;
+}
+
+.flag svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* A dot on the funnel while the filters panel is open. */
+.filters-btn {
+  position: relative;
+}
+
+.filters-btn[aria-expanded="true"] {
+  color: var(--accent);
+}
+
+.filters-btn[aria-expanded="true"]::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 2px var(--surface);
+}
+
+/* Pill switch for on/off settings: <input type="checkbox" class="switch" role="switch">. */
+.switch {
+  appearance: none;
+  flex: none;
+  position: relative;
+  width: 40px;
+  height: 22px;
+  margin: 0;
+  border-radius: 999px;
+  background: var(--border);
+  cursor: pointer;
+  transition: background .15s;
+}
+
+.switch::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 2px rgb(0 0 0 / .3);
+  transition: transform .15s;
+}
+
+.switch:checked {
+  background: var(--accent);
+}
+
+.switch:checked::before {
+  transform: translateX(18px);
+}
+
+.switch:disabled {
+  opacity: .5;
+  cursor: default;
+}
+
+.switch:focus-visible {
+  outline-offset: 2px;
+}
+
+/* Checkbox drawn larger and bolder than the browser's (the game list). */
+.box {
+  appearance: none;
+  flex: none;
+  display: inline-grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  border: 2px solid var(--muted);
+  border-radius: 4px;
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.box::before {
+  content: "";
+  width: 9px;
+  height: 5px;
+  margin-top: -2px;
+  border: solid var(--accent-text);
+  border-width: 0 0 2px 2px;
+  transform: rotate(-45deg);
+  visibility: hidden;
+}
+
+.box:checked {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.box:checked::before {
+  visibility: visible;
+}
+
+/* Diagnostics button (while the setting is on) and its count of saved captures. */
+.diag-btn {
+  position: relative;
+}
+
+.diag-count {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  min-width: 16px;
+  padding: 0 4px;
+  border-radius: 8px;
+  background: var(--danger);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+}
+
+input[type="search"], select {
+  padding: 5px 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  min-width: 0;
+}
+
+select.inline {
+  padding: 1px 4px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.segmented {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  flex: none;
+}
+
+.segmented input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.segmented label {
+  padding: 5px 10px;
+  cursor: pointer;
+  background: var(--surface);
+  color: var(--muted);
+}
+
+.segmented label + input + label {
+  border-left: 1px solid var(--border);
+}
+
+.segmented input:checked + label {
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.segmented.wide {
+  display: flex;
+}
+
+.segmented.wide label {
+  flex: 1;
+  padding: 5px 6px;
+  text-align: center;
+}
+
+.segmented input:focus-visible + label {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+/* Frame */
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  height: var(--topbar-height);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  display: block;
+}
+
+/* The hat opens the About page (full page and settings). */
+.logo-link {
+  display: flex;
+  border-radius: 4px;
+}
+
+.nav {
+  display: flex;
+  gap: 6px;
+}
+
+body[data-view="page"] .nav {
+  margin-left: 16px;
+}
+
+body[data-view="popup"] .topbar {
+  gap: 5px;
+  padding: 8px 10px;
+}
+
+body[data-view="popup"] .nav .btn {
+  padding: 4px 8px;
+}
+
+/* The popup's bar is full at 560 px: the logo stands for the name, which stays for screen
+   readers. */
+body[data-view="popup"] .topbar h1 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+body[data-view="popup"] .icon-btn {
+  width: 30px;
+}
+
+/* Set by app.js when a translation overflows the bar. */
+.topbar.compact #sync > span {
+  display: none;
+}
+
+.banner {
+  margin: 8px 12px 0;
+  padding: 8px 10px;
+  border-radius: var(--radius);
+  background: var(--danger-soft);
+  color: var(--danger);
+}
+
+.banner ul {
+  margin: 4px 0 0;
+  padding-left: 18px;
+}
+
+/* Stall alerts (app.js): one line per stalled stream, with its buttons. */
+.stalls {
+  display: grid;
+  gap: 6px;
+  margin: 8px 12px 0;
+}
+
+.stall {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 8px;
+  padding: 6px 10px;
+  border-radius: var(--radius);
+  background: var(--warn-soft);
+  color: var(--warn);
+}
+
+.stall.gave-up {
+  background: var(--danger-soft);
+  color: var(--danger);
+}
+
+.stall-text {
+  flex: 1 1 200px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 8px;
+}
+
+.toolbar input[type="search"] {
+  flex: 1;
+}
+
+.status {
+  margin: 8px 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.empty {
+  padding: 24px 8px;
+  text-align: center;
+  color: var(--muted);
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  padding: 8px 12px;
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+}
+
+/* Footer text: plain, muted small capitals on every view; the links match it. */
+footer {
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+footer,
+footer a {
+  color: var(--muted);
+}
+
+/* The footer stays at the bottom of the window. On the tab pages the body is at least a
+   window tall, so it sits at the bottom of short content too; the popup sizes to its
+   content, so there it is only sticky. */
+footer {
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
+  margin-top: auto;
+}
+
+footer a {
+  white-space: nowrap;
+}
+
+/* The popup's footer can wrap to two lines; keep them close. */
+body[data-view="popup"] footer {
+  row-gap: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+body:is([data-view="page"], [data-view="settings"], [data-view="help"], [data-view="about"]) {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Popup: one column; the filters replace the list while open. */
+
+body[data-view="popup"] main,
+body[data-view="popup"] .filters {
+  padding: 10px 12px;
+}
+
+/* Full page: list beside a filters column (the funnel hides it). */
+
+body[data-view="page"] .topbar,
+body[data-view="page"] footer {
+  padding-left: max(16px, calc((100vw - 1280px) / 2));
+  padding-right: max(16px, calc((100vw - 1280px) / 2));
+}
+
+body[data-view="page"] .layout {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* The health banner and stall alerts line up with the layout's content box. */
+body[data-view="page"] .banner,
+body[data-view="page"] .stalls {
+  width: calc(100% - 32px);
+  max-width: 1248px;
+  margin: 16px auto 0;
+}
+
+body[data-view="page"].no-filters .layout {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+body[data-view="page"] .filters {
+  position: sticky;
+  top: calc(var(--topbar-height) + 16px);
+  align-self: start;
+  max-height: calc(100vh - var(--topbar-height) - var(--footer-height) - 32px);
+  overflow-y: auto;
+  padding: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+/* Each campaign spans the list, so the order by expiry reads straight down; its drops
+   are tiles side by side. */
+body[data-view="page"] .drops {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0 16px;
+}
+
+body[data-view="page"] .art {
+  width: 51px;
+  height: 68px;
+}
+
+@media (max-width: 760px) {
+  body[data-view="page"] .layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  body[data-view="page"] .filters {
+    position: static;
+    max-height: none;
+  }
+}
+
+/* Filters */
+
+.filters > h2 {
+  margin-bottom: 12px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.field-label {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.games-box {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.games-tools {
+  display: flex;
+  gap: 6px;
+  padding: 6px;
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--border);
+}
+
+.games-tools input {
+  flex: 1;
+}
+
+#games {
+  list-style: none;
+  margin: 0;
+  padding: 4px;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.game {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.game:hover {
+  background: var(--surface-2);
+}
+
+.game:has(.box:checked) {
+  background: var(--accent-soft);
+}
+
+.game span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* A setting: its label and hint on the left, its control on the right. */
+
+.setting {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 0;
+}
+
+.setting + .setting {
+  border-top: 1px solid var(--border);
+}
+
+.filters .setting {
+  padding: 0 0 12px;
+}
+
+.setting-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.setting-text label {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.setting-text .setting-name {
+  font-weight: 600;
+}
+
+.setting-text .hint {
+  margin: 2px 0 0;
+}
+
+.setting.nested {
+  border-top: none;
+  padding: 0 0 10px 20px;
+}
+
+.setting.nested .setting-text label {
+  font-weight: 400;
+}
+
+.setting.disabled {
+  opacity: .55;
+}
+
+.language-choice {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Settings page */
+
+body[data-view="settings"] .topbar,
+body[data-view="settings"] footer {
+  padding-left: max(16px, calc((100vw - 820px) / 2));
+  padding-right: max(16px, calc((100vw - 820px) / 2));
+}
+
+body[data-view="settings"] .nav {
+  margin-left: 16px;
+}
+
+.sheet {
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 8px 16px 24px;
+}
+
+.sheet section {
+  scroll-margin-top: calc(var(--topbar-height) + 8px);
+  margin-top: 16px;
+  padding: 14px 16px 6px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.sheet section:target {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+
+.sheet h2 {
+  margin: 0 0 4px;
+}
+
+/* Danger Zone: diagnostics and deleting stored data. */
+.sheet section.danger-zone {
+  border-color: var(--danger);
+}
+
+.danger-zone h2 {
+  color: var(--danger);
+}
+
+.wipe-status:empty {
+  display: none;
+}
+
+.sheet-note {
+  margin: 16px 2px 0;
+}
+
+/* Last scans: a card per page. */
+
+.scan-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+  margin: 8px 0 10px;
+}
+
+.scan {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface-2);
+}
+
+.scan-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.scan .pill {
+  background: var(--surface);
+}
+
+.scan .pill.accent {
+  background: var(--accent);
+}
+
+.scan-head h3 {
+  flex: 1;
+  margin: 0;
+  font-size: 16px;
+}
+
+.scan-dot {
+  flex: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--muted);
+}
+
+.scan[data-level="ok"] .scan-dot {
+  background: var(--ok);
+}
+
+.scan[data-level="warn"] .scan-dot {
+  background: var(--warn);
+}
+
+.scan[data-level="fatal"] .scan-dot {
+  background: var(--danger);
+}
+
+.scan-when {
+  margin: 4px 0 6px 18px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.scan-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  list-style: none;
+  margin: 0 0 6px 18px;
+  padding: 0;
+}
+
+.scan-facts li {
+  padding: 1px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  font-size: 14px;
+}
+
+.scan-warnings {
+  list-style: none;
+  margin: 0 0 0 18px;
+  padding: 0;
+  font-size: 15px;
+  word-break: break-word;
+}
+
+.scan-warnings li {
+  padding: 2px 0 2px 20px;
+  position: relative;
+  color: var(--warn);
+}
+
+.scan-warnings li::before {
+  content: "!";
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+}
+
+.scan-warnings li.fatal {
+  color: var(--danger);
+}
+
+.scan-warnings li.clean {
+  color: var(--ok);
+}
+
+.scan-warnings li.clean::before {
+  content: "✓";
+}
+
+/* Game groups */
+
+.game-group + .game-group {
+  margin-top: 14px;
+}
+
+.game-group > h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 16px;
+  color: var(--text);
+}
+
+.game-group > h2 img {
+  width: 24px;
+  height: 32px;
+  border-radius: 3px;
+  object-fit: cover;
+}
+
+.game-group > h2 .count {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.group-list {
+  display: grid;
+  gap: 8px;
+}
+
+#campaigns.flat {
+  display: grid;
+  gap: 8px;
+}
+
+/* Campaign card */
+
+.campaign {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.campaign.urgency-soon {
+  border-left-color: var(--warn);
+}
+
+.campaign.urgency-critical {
+  border-left-color: var(--danger);
+}
+
+.campaign > summary {
+  display: flex;
+  gap: 10px;
+  padding: 8px 10px;
+  cursor: pointer;
+  list-style: none;
+  background-color: var(--surface-2);
+}
+
+.campaign > summary::-webkit-details-marker {
+  display: none;
+}
+
+.art {
+  flex: none;
+  width: 45px;
+  height: 60px;
+  border-radius: 4px;
+  object-fit: cover;
+  background: var(--surface-2);
+}
+
+.head {
+  flex: 1;
+  min-width: 0;
+}
+
+.title-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.title {
+  flex: 1;
+  min-width: 0;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.subtitle {
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.meta-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 8px;
+  margin-top: 4px;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.pill {
+  flex: none;
+  display: inline-block;
+  padding: 1px 7px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  background: var(--surface-2);
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.pill.soon {
+  background: var(--warn-soft);
+  color: var(--warn);
+}
+
+.pill.critical {
+  background: var(--danger-soft);
+  color: var(--danger);
+}
+
+.pill.not-connected {
+  background: var(--danger-soft);
+  color: var(--danger);
+}
+
+.pill.accent,
+.pill.claimable {
+  background: var(--accent);
+  color: var(--accent-text);
+}
+
+.pill.done {
+  background: var(--ok-soft);
+  color: var(--ok);
+}
+
+.bar {
+  position: relative;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--surface-2);
+  overflow: hidden;
+}
+
+.bar > span {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: 3px;
+  background: var(--accent);
+}
+
+.bar.ok > span {
+  background: var(--ok);
+}
+
+.claim-progress {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.claim-progress .bar {
+  width: 70px;
+}
+
+.chevron {
+  flex: none;
+  align-self: center;
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: var(--muted);
+  stroke-width: 1.5;
+  transition: transform .15s;
+}
+
+.campaign[open] .chevron {
+  transform: rotate(90deg);
+}
+
+.campaign-body {
+  padding: 0 10px 10px;
+  border-top: 1px solid var(--border);
+}
+
+.connect-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0 0;
+  padding: 6px 8px;
+  border-radius: 6px;
+  background: var(--danger-soft);
+  color: var(--danger);
+}
+
+.connect-row .btn {
+  margin-left: auto;
+}
+
+.drops {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.drop {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  padding: 8px 0;
+}
+
+/* Rounded corner box aroundDrop list LI elements */
+li.drop {
+  border: 1px solid var(--accent-dark);
+  border-radius: 6px;
+  margin-top: 5px;
+  margin-bottom: 2px;
+  padding: 8px;
+  background: var(--surface-2);
+}
+
+/* A drop ending soon is outlined like its campaign card. */
+li.drop.urgency-soon {
+  border-color: var(--warn);
+}
+
+li.drop.urgency-critical {
+  border-color: var(--danger);
+}
+
+.reward {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  object-fit: contain;
+  background: var(--surface-2);
+}
+
+.drop-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.drop-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.drop-head .pill {
+  margin-left: auto;
+}
+
+.drop-name {
+  font-weight: 500;
+  min-width: 0;
+}
+
+.drop.claimed .drop-name {
+  color: var(--muted);
+}
+
+.drop-meta {
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.channels a + a::before {
+  content: ", ";
+  color: var(--muted);
+}
+
+.drop-progress {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.drop-progress .bar {
+  flex: 1;
+}
+
+.drop-state {
+  flex: none;
+  font-size: 15px;
+}
+
+.drop-state.claimed {
+  color: var(--ok);
+  font-weight: 600;
+}
+
+.campaign-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 12px;
+  margin-top: 6px;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.drops-tag-wrap {
+  display: inline-flex;
+}
+
+.drops-tag {
+  display: inline-flex;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+.drops-tag:hover {
+  color: var(--accent-dark);
+}
+
+.drops-tag svg {
+  fill: currentColor;
+}
+
+/* Popover (top layer, so the card's overflow does not clip it), placed below the tag by
+   CSS anchor positioning, or above it when there is no room. */
+.drops-menu {
+  inset: auto;
+  position-area: block-end span-inline-end;
+  position-try-fallbacks: flip-block;
+  margin: 4px 0;
+  min-width: 220px;
+  padding: 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 15px;
+  box-shadow: 0 4px 16px rgb(0 0 0 / .2);
+}
+
+.drops-menu-title {
+  padding: 4px 8px 6px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.drops-menu a {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 5px 8px;
+  border-radius: 4px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.drops-menu a:hover,
+.drops-menu a:focus-visible {
+  background: var(--accent-soft);
+}
+
+.drops-menu .tag-name {
+  color: var(--muted);
+}
+
+.art-link {
+  flex: none;
+  display: flex;
+}
+
+/* Help page */
+
+body:is([data-view="help"], [data-view="about"]) .topbar,
+body:is([data-view="help"], [data-view="about"]) footer {
+  padding-left: max(16px, calc((100vw - 820px) / 2));
+  padding-right: max(16px, calc((100vw - 820px) / 2));
+}
+
+body:is([data-view="help"], [data-view="about"]) .nav {
+  margin-left: 16px;
+}
+
+.help {
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 8px 16px 24px;
+}
+
+.help section {
+  scroll-margin-top: calc(var(--topbar-height) + 8px);
+  margin-top: 16px;
+  padding: 4px 16px 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.help h2 {
+  margin: 12px 0 8px;
+  font-size: 17px;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--text);
+}
+
+#version {
+  white-space: nowrap;
+}
+
+.help p {
+  margin: 0 0 10px;
+}
+
+.help dl {
+  margin: 0 0 10px;
+}
+
+.help dt {
+  font-weight: 600;
+}
+
+.help dd {
+  margin: 2px 0 10px;
+  color: var(--muted);
+}
+
+.help .legend {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 8px 14px;
+  align-items: baseline;
+}
+
+.help .legend dd {
+  margin: 0;
+}
+
+.help .legend .claim-progress {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  margin-top: 16px;
+  font-size: 15px;
+}
+
+@media (max-width: 560px) {
+  .help .legend {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2px;
+  }
+
+  .help .legend dd {
+    margin-bottom: 8px;
+  }
+}
+
+.topbar h1 {
+  white-space: nowrap;
+}
+
+/* The name doubles as a wordmark beside the fedora: the title in the heavy face, the name
+   itself (common.js wraps it in .wordmark) in capitals. */
+.topbar h1,
+.brand {
+  font-family: sans-serif;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px rgba(128, 128, 128, 0.5);
+}
+
+.wordmark {
+  text-transform: uppercase;
+}
+
+/* The trademark sign stays in the normal weight, without the shadow, and smaller. */
+.tm {
+  font-weight: 400;
+  font-size: .6em;
+  vertical-align: top;
+  text-shadow: none;
+}
+
+/* The About page's heading: "DRAGNET™ for Twitch" in the same face. */
+.about .brand {
+  font-size: 20px;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--text);
+}
+
+/* Narrow settings and help tabs: the Twitch links give way to the title and buttons. */
+@media (max-width: 680px) {
+  body[data-view="settings"] .nav,
+  body:is([data-view="help"], [data-view="about"]) .nav {
+    display: none;
+  }
+}
+
+/* About page (reuses the help page's sections) */
+
+.about-links {
+  margin: 0 0 10px;
+  padding-left: 20px;
+}
+
+.changelog {
+  margin: 0 0 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.release h3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px 12px;
+  margin: 4px 0 6px;
+  font-size: 16px;
+}
+
+.release-date {
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.release ul {
+  margin: 0 0 10px;
+  padding-left: 20px;
+}
+
+/* Statistics panel (full page): a collapsible card above the toolbar. */
+
+.stats {
+  margin-bottom: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+/* The title matches the filters column's: the global h2 style. */
+.stats > h2 {
+  margin: 0;
+  padding: 12px 12px 4px;
+}
+
+.stats[hidden] {
+  display: none;
+}
+
+.stats-body {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px 32px;
+  padding: 0 12px 10px;
+}
+
+@media (max-width: 640px) {
+  .stats-body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.stats-group h3 {
+  margin: 4px 0 6px;
+  font-size: 16px;
+  color: var(--text);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.stats-list {
+  display: grid;
+  gap: 2px;
+  margin: 0;
+}
+
+.stat {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.stat dt {
+  color: var(--muted);
+}
+
+.stat dd {
+  margin: 0;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.stats-chart {
+  margin-top: 10px;
+}
+
+.chart-bars {
+  display: block;
+  width: 100%;
+  height: 56px;
+}
+
+.chart-bar {
+  fill: var(--accent);
+}
+
+.chart-bar.empty {
+  fill: var(--border);
+}
+
+.chart-axis {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 2px;
+  font-size: 13px;
+  color: var(--muted);
+}
+

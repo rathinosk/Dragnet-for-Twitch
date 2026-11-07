@@ -1,0 +1,144 @@
+<!doctype html>
+<!-- SPDX-License-Identifier: GPL-3.0-or-later -->
+<!-- Copyright (C) 2026 Rathinosk -->
+<!-- Diagnostics (diag/README.md), switched on in the settings' Danger Zone. English only, not in _locales. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dragnet diagnostics</title>
+  <link rel="icon" href="../icons/icon-32.png">
+  <link rel="stylesheet" href="../ui/dragnet.css">
+  <link rel="stylesheet" href="diagnostics.css">
+  <script type="module" src="diagnostics.js"></script>
+</head>
+<body data-view="diag">
+  <header class="topbar">
+    <img class="logo" src="../icons/icon-32.png" alt="" width="24" height="24">
+    <h1>Diagnostics</h1>
+    <nav class="nav">
+      <a class="btn" href="https://www.twitch.tv/drops/campaigns" target="_blank" rel="noopener">Campaigns</a>
+      <a class="btn" href="https://www.twitch.tv/drops/inventory" target="_blank" rel="noopener">Inventory</a>
+    </nav>
+    <span class="spacer"></span>
+    <a class="btn primary" href="../ui/page.html">Campaign list</a>
+  </header>
+  <main class="diag">
+    <p id="diag-off" class="diag-off" hidden>Diagnostics are off: Probe, Snapshot and the watcher do nothing until they are switched on in <a href="../ui/settings.html#danger">Settings, Danger Zone</a>.</p>
+    <p class="hint">Development and troubleshooting tool. Everything here stays in this browser: snapshots and captures are saved as local downloads only. They contain account data (campaigns, claim history); the login name is replaced by USER, but skim a file before sharing it.</p>
+
+    <section>
+      <h2>Checks</h2>
+      <p class="hint">What runs on its own while Diagnostics are on. Pick a scenario to set the checks for what is being diagnosed, or switch them one by one (the scenario then shows Custom). Changes apply at once to open Twitch tabs. Probe, Snapshot and the downloads below only run when clicked, so they have no switch.</p>
+      <div class="row">
+        <label>Scenario <select id="preset">
+          <option value="everything">Everything</option>
+          <option value="quiet">Quiet (manual tools only)</option>
+          <option value="streamClaim">Claim prompt on stream</option>
+          <option value="autoClaim">Auto-claim on the inventory</option>
+          <option value="stall">Stalled progress</option>
+          <option value="stuck">Stuck after reload</option>
+          <option value="gqlShapes">Twitch data shapes</option>
+          <option value="custom" disabled>Custom</option>
+        </select></label>
+      </div>
+      <ul class="checks">
+        <li><label><input type="checkbox" data-check="dropsMarkup"> <strong>Drops-page markup</strong></label>
+          <span class="hint">On each drops-page scan: "Claim Now", anything else labelled "claim", a 100% bar without a button, each in-progress campaign block.</span></li>
+        <li><label><input type="checkbox" data-check="liveWatch"> <strong>Inventory live watch</strong></label>
+          <span class="hint">Keeps checking an open inventory tab after its scan, so a "Claim Now" is saved even if the page is not reloaded by hand. With a reload interval, the tab also reloads itself (each reload is a normal passive scan), in case Twitch does not update progress in place. A label at the bottom left of the Twitch page shows when it is on.</span>
+          <label class="sub">Mode <select id="live-watch">
+            <option value="off">Off</option>
+            <option value="observe">Watch page changes</option>
+            <option value="reload5">Watch, reload every 5 minutes</option>
+            <option value="reload15">Watch, reload every 15 minutes</option>
+          </select></label></li>
+        <li><label><input type="checkbox" data-check="gqlDrops"> <strong>Twitch data on drops pages</strong></label>
+          <span class="hint">Saves the drops responses the campaigns and inventory pages received (needs Twitch page data).</span></li>
+        <li><label><input type="checkbox" data-check="streamClaim"> <strong>Stream: claim-like controls</strong></label>
+          <span class="hint">On channel pages: anything labelled "claim" other than "Claim Bonus", or matching a guessed claim hook (<code>stream:claim-like</code>).</span></li>
+        <li><label><input type="checkbox" data-check="streamDropUi"> <strong>Stream: drop hooks</strong></label>
+          <span class="hint">Each distinct set of elements whose hook mentions drops (<code>stream:drop-ui</code>).</span></li>
+        <li><label><input type="checkbox" data-check="streamToast"> <strong>Stream: toasts</strong></label>
+          <span class="hint">Toasts and alerts that mention a drop or reward (<code>stream:toast</code>).</span></li>
+        <li><label><input type="checkbox" data-check="streamStuck"> <strong>Stream: stuck page</strong></label>
+          <span class="hint">A channel page that was playing a drops stream and for 5 minutes is not (paused, no player, Drops Enabled tag or game missing), for example after a reload that Twitch did not resume. Saves one capture of the player column per spell (<code>stream:stuck</code>).</span></li>
+        <li><label><input type="checkbox" data-check="gqlStream"> <strong>Twitch data on channel pages</strong></label>
+          <span class="hint">Saves the drops operations Twitch's player sends, at most once a minute (needs Twitch page data).</span></li>
+        <li><label><input type="checkbox" data-check="stallPanel"> <strong>Stall panel</strong></label>
+          <span class="hint">Shows stall detection's live state on this page (below). Read-only.</span></li>
+      </ul>
+    </section>
+
+    <section id="stall-section">
+      <h2>Stall detection</h2>
+      <p class="hint">What stall detection sees now: each channel tab reporting what it plays, and the drops in progress of its game. A drop counts as stalled after <span id="stall-minutes"></span> minutes without a rise while the tab plays a drops-enabled stream, seen by at least two inventory reads; the tab is stalled when all of its game's drops are. Updates live and once a minute.</p>
+      <p id="stall-off" class="diag-off" hidden>Stall detection is off in Settings: nothing is tracked.</p>
+      <div id="stall-panel"></div>
+    </section>
+
+    <section>
+      <h2>Twitch drops tabs</h2>
+      <p class="hint">Probe parses the page as it is, without clicking. Snapshot saves the sanitized page and its facts file, as <code>tools/capture-snapshot.js</code> does; on the inventory it clicks Load More (up to the count given), and the expanded snapshot of the campaigns page opens every card (2 to 3 minutes, with the Twitch tab in front). A tab opened before Dragnet was loaded or reloaded must be reloaded first.</p>
+      <div class="row">
+        <label>File label <input id="label" type="text" placeholder="claimable" maxlength="40" size="14"></label>
+        <label>Load More clicks <input id="load-more" type="number" min="0" max="40" value="10"></label>
+        <button id="refresh-tabs" class="btn small" type="button">Refresh list</button>
+      </div>
+      <ul id="tabs" class="tabs"></ul>
+      <p id="no-tabs" class="hint" hidden>No Twitch drops page is open. Open Campaigns or Inventory above.</p>
+    </section>
+
+    <section>
+      <h2>Twitch channel tabs</h2>
+      <p class="hint"><strong>To capture the on-stream claim prompt:</strong> keep Diagnostics on, watch a drops-enabled stream until a drop reaches 100%, and don't click anything; the watcher saves what appears (saved markup below, kinds <code>stream:*</code>). Probe stream shows what the watcher and stall detection see on the page now; Snapshot stream saves the player, the chat input bar and the toasts, without the chat log or input.</p>
+      <ul id="stream-tabs" class="tabs"></ul>
+      <p id="no-stream-tabs" class="hint" hidden>No Twitch channel page is open.</p>
+    </section>
+
+    <section>
+      <h2>Result</h2>
+      <div id="result-actions" class="row"></div>
+      <pre id="output" class="output">Nothing run yet.</pre>
+    </section>
+
+    <section>
+      <h2>Saved markup <span id="capture-count" class="hint"></span></h2>
+      <p class="hint">Saved automatically while scanning: a "Claim Now" button, anything else labelled "claim", a progress bar at 100% without a claim button, and each in-progress campaign block once per distinct set of buttons. On channel pages (<code>stream:*</code>): anything labelled "claim" other than "Claim Bonus" or matching a guessed claim hook, each distinct set of drop-related hooks, and toasts that mention a drop or reward. Each case is saved once; the newest 40 are kept.</p>
+      <div class="row">
+        <label>Show <select id="capture-filter">
+          <option value="all">All</option>
+          <option value="drops">Drops pages</option>
+          <option value="stream">Channel pages (stream:*)</option>
+        </select></label>
+        <button id="download-all" class="btn small" type="button">Download all (JSON)</button>
+        <button id="clear" class="btn small" type="button">Clear</button>
+      </div>
+      <table class="captures">
+        <thead><tr><th>Saved</th><th>Page</th><th>Kind</th><th>Summary</th><th></th></tr></thead>
+        <tbody id="captures"></tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Twitch data <span id="gql-count" class="hint"></span></h2>
+      <p class="hint">With <strong>Twitch page data</strong> also switched on (<a href="../ui/settings.html#danger">Settings, Danger Zone</a>; reload open Twitch tabs after switching), each drops-page scan saves the drops-related responses (GQL) the page received from Twitch's GraphQL endpoint: the newest per page, operation and variables (up to 250 entries; repeats of an operation go first when trimming). The viewer's login, id and display name are replaced by USER and token-like fields removed, but skim a file before sharing it. To capture: visit the campaigns page (a Full sync opens every card) and the inventory, ideally with a claimable drop, then download all.</p>
+      <p id="gql-off" class="diag-off" hidden>Twitch page data is off: nothing new is saved here until it is switched on.</p>
+      <div class="row">
+        <button id="gql-download-all" class="btn small" type="button">Download all (JSON)</button>
+        <button id="gql-clear" class="btn small" type="button">Clear</button>
+      </div>
+      <table class="captures">
+        <thead><tr><th>Received</th><th>Page</th><th>Operation</th><th>Variables</th><th>Size</th><th></th></tr></thead>
+        <tbody id="gql-captures"></tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Stored data</h2>
+      <p class="hint">Everything Dragnet keeps: scraped data (local), settings (sync), and what lasts until the browser closes (session: Full sync and check tabs, stall detection's watch tabs and alerts).</p>
+      <button id="download-storage" class="btn small" type="button">Download stored data (JSON)</button>
+    </section>
+  </main>
+</body>
+</html>

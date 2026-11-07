@@ -1,0 +1,998 @@
+{
+  "localeCode": {
+    "message": "en",
+    "description": "Do not translate: this locale's code as Intl.PluralRules takes it (\"de\", \"pt-BR\"). Picks the plural forms, the page language and the date format."
+  },
+  "extName": {
+    "message": "Dragnet for Twitch",
+    "description": "Extension name (manifest and store). Keep \"Dragnet\"; \"for Twitch\" describes, it is not an affiliation."
+  },
+  "extShortName": {
+    "message": "Dragnet",
+    "description": "Short extension name, also the popup heading."
+  },
+  "extDescription": {
+    "message": "Tracks Twitch drop campaigns and your claim progress, sorted by expiration date. Not affiliated with Twitch.",
+    "description": "Manifest and store description; keep the 'not affiliated' statement."
+  },
+  "actionTitle": {
+    "message": "Dragnet",
+    "description": "Toolbar button tooltip."
+  },
+  "fullSync": {
+    "message": "Full sync",
+    "description": "Button: open the Twitch drops pages in a tab and read everything."
+  },
+  "fullSyncTitle": {
+    "message": "Open the Twitch drops pages in a new tab and read everything",
+    "description": "Tooltip of the Full sync button."
+  },
+  "statusNoScan": {
+    "message": "No scan yet. Open the drop campaigns page on Twitch, or press Full sync.",
+    "description": "Status line before any scan."
+  },
+  "storageError": {
+    "message": "Could not read storage.",
+    "description": "Status line when the extension's storage cannot be read."
+  },
+  "campaignCount_one": {
+    "message": "{count} campaign",
+    "description": "Status line start. {count}: campaigns shown."
+  },
+  "campaignCount_other": {
+    "message": "{count} campaigns",
+    "description": "Status line start. {count}: campaigns shown."
+  },
+  "campaignCountHidden_one": {
+    "message": "{count} campaign, {hidden} hidden by filters",
+    "description": "Status line start when filters hide some. {count}: campaigns shown; {hidden}: how many the filters hide."
+  },
+  "campaignCountHidden_other": {
+    "message": "{count} campaigns, {hidden} hidden by filters",
+    "description": "Status line start when filters hide some. {count}: campaigns shown; {hidden}: how many the filters hide."
+  },
+  "scanFull": {
+    "message": "Full sync",
+    "description": "Last scans: the read was a Full sync."
+  },
+  "scanVisit": {
+    "message": "Visit",
+    "description": "Last scans: the read was a normal visit."
+  },
+  "scanCardsOpened_one": {
+    "message": "{opened} of {count} card opened",
+    "description": "Scan detail. {opened}: cards opened; {count}: cards on the page."
+  },
+  "scanCardsOpened_other": {
+    "message": "{opened} of {count} cards opened",
+    "description": "Scan detail. {opened}: cards opened; {count}: cards on the page."
+  },
+  "scanInterrupted": {
+    "message": "Interrupted",
+    "description": "Last scans: the page was left before the read finished."
+  },
+  "scanLoadMore_one": {
+    "message": "{count}× Load More",
+    "description": "Last scans: how many times Load More was clicked."
+  },
+  "scanLoadMore_other": {
+    "message": "{count}× Load More",
+    "description": "Last scans: how many times Load More was clicked."
+  },
+  "scanReachedKnown": {
+    "message": "Stopped at known claims",
+    "description": "Last scans: the read stopped loading history at claims it already had."
+  },
+  "scanGqlCampaigns": {
+    "message": "Twitch data (details: {count}, drops added: {added})",
+    "description": "Last scans: read with Twitch page data. {count}: campaign details read; {added}: drops added that the page reading missed."
+  },
+  "scanGqlInventory": {
+    "message": "Twitch data (exact claim times: {count})",
+    "description": "Last scans: read with Twitch page data. {count}: claims with exact times."
+  },
+  "scanNotRead": {
+    "message": "Not read yet",
+    "description": "Last scans: the page has not been read."
+  },
+  "scanNoWarnings": {
+    "message": "No warnings",
+    "description": "Last scans: the read had no warnings."
+  },
+  "healthIntro": {
+    "message": "Twitch's page did not read as expected. Your stored data is kept.",
+    "description": "Heading of the health warning banner."
+  },
+  "warnLocaleUnsupported": {
+    "message": "Twitch is shown in a language Dragnet cannot read yet ({lang}). Switch Twitch to English to scan.",
+    "description": "Health warning. {lang}: the page's language tag."
+  },
+  "endsAt": {
+    "message": "Ends {date}",
+    "description": "{date}: end date and time."
+  },
+  "hoursLeft_one": {
+    "message": "{count} h left",
+    "description": "Time left, in hours."
+  },
+  "hoursLeft_other": {
+    "message": "{count} h left",
+    "description": "Time left, in hours."
+  },
+  "daysLeft_one": {
+    "message": "{count} day left",
+    "description": "Time left, in days."
+  },
+  "daysLeft_other": {
+    "message": "{count} days left",
+    "description": "Time left, in days."
+  },
+  "durationHoursMinutes": {
+    "message": "{h} h {m} min",
+    "description": "Watch time. {h}: hours; {m}: minutes."
+  },
+  "durationHours": {
+    "message": "{h} h",
+    "description": "Watch time in whole hours."
+  },
+  "durationMinutes": {
+    "message": "{m} min",
+    "description": "Watch time in minutes."
+  },
+  "subsRequired_one": {
+    "message": "{count} sub",
+    "description": "Drop requirement: subscriptions to buy."
+  },
+  "subsRequired_other": {
+    "message": "{count} subs",
+    "description": "Drop requirement: subscriptions to buy."
+  },
+  "subsUnknown": {
+    "message": "subs",
+    "description": "Drop requirement when the number of subscriptions is not known."
+  },
+  "progressOfMinutes": {
+    "message": "{percent}% ({done} of {total})",
+    "description": "Drop progress. {percent}: percent; {done}, {total}: watch times."
+  },
+  "progressPercent": {
+    "message": "{percent}%",
+    "description": "Drop progress in percent."
+  },
+  "stateClaimed": {
+    "message": "Claimed",
+    "description": "Drop state."
+  },
+  "stateClaimNow": {
+    "message": "Claim now",
+    "description": "Link to the inventory for a drop that can be claimed."
+  },
+  "watchOn": {
+    "message": "on",
+    "description": "Before a list of channel links: \"on A, B\"."
+  },
+  "watchOr": {
+    "message": "or",
+    "description": "Between the channel links and the \"more channels\" link."
+  },
+  "moreChannels": {
+    "message": "more channels",
+    "description": "Link to the category's drops-enabled channels."
+  },
+  "anyChannel": {
+    "message": "any drops channel",
+    "description": "Link to the category's drops-enabled channels, for drops open to any channel."
+  },
+  "notConnected": {
+    "message": "Not connected",
+    "description": "Badge on a campaign whose game account is not linked."
+  },
+  "connect": {
+    "message": "Connect",
+    "description": "Link to the publisher's account-link page."
+  },
+  "noDrops": {
+    "message": "No drops listed.",
+    "description": "Campaign whose card lists no drops."
+  },
+  "dropsNotRead": {
+    "message": "Drops not read yet.",
+    "description": "Campaign whose card body has not been read yet."
+  },
+  "openCampaigns": {
+    "message": "Campaigns",
+    "description": "Top bar button: open Twitch's drop campaigns page."
+  },
+  "openInventory": {
+    "message": "Inventory",
+    "description": "Top bar button: open Twitch's drops inventory page."
+  },
+  "filtersHeading": {
+    "message": "Filters",
+    "description": "Heading of the filters section."
+  },
+  "connectionFilterLabel": {
+    "message": "Game account",
+    "description": "Label of the connection filter."
+  },
+  "connectionFilterAll": {
+    "message": "Show all",
+    "description": "Connection filter choice."
+  },
+  "connectionFilterHide": {
+    "message": "Hide not connected",
+    "description": "Connection filter choice: hide campaigns whose game account is not linked."
+  },
+  "connectionFilterOnly": {
+    "message": "Only not connected",
+    "description": "Connection filter choice: show only campaigns whose game account is not linked."
+  },
+  "gameFilterLabel": {
+    "message": "Games",
+    "description": "Label of the game filter."
+  },
+  "gameFilterHide": {
+    "message": "Hide checked",
+    "description": "Game filter mode: hide the checked games."
+  },
+  "gameFilterInclude": {
+    "message": "Show only checked",
+    "description": "Game filter mode: show only the checked games (none checked shows all)."
+  },
+  "historyLabel": {
+    "message": "Claimed drops history",
+    "description": "Label of the history length choice."
+  },
+  "historyHint": {
+    "message": "How far back a Full sync reads Twitch's list of claimed drops; older claims are not kept.",
+    "description": "Hint under the history length choice."
+  },
+  "historyDays_one": {
+    "message": "{count} day",
+    "description": "History length."
+  },
+  "historyDays_other": {
+    "message": "{count} days",
+    "description": "History length."
+  },
+  "historyWeeks_one": {
+    "message": "{count} week",
+    "description": "History length."
+  },
+  "historyWeeks_other": {
+    "message": "{count} weeks",
+    "description": "History length."
+  },
+  "historyMonths_one": {
+    "message": "{count} month",
+    "description": "History length."
+  },
+  "historyMonths_other": {
+    "message": "{count} months",
+    "description": "History length."
+  },
+  "incrementalLabel": {
+    "message": "Re-read older campaigns",
+    "description": "Switch label: the incremental setting."
+  },
+  "incrementalHint": {
+    "message": "Each visit to the campaigns page also re-reads the campaigns read longest ago, to pick up added drops and newly linked accounts.",
+    "description": "Hint under the incremental switch."
+  },
+  "incrementalCountLabel": {
+    "message": "Campaigns per visit",
+    "description": "Label of the number of campaigns to re-read."
+  },
+  "autoClaimLabel": {
+    "message": "Auto-claim drops",
+    "description": "Auto-claim switch label."
+  },
+  "autoClaimHint": {
+    "message": "Clicks \"Claim Now\" whenever the inventory page is open.",
+    "description": "Hint under the auto-claim switch; quotes Twitch's button, which stays English."
+  },
+  "autoClaimUnavailable": {
+    "message": "(unavailable until Twitch's \"Claim Now\" button has been seen and tested)",
+    "description": "Note beside the disabled auto-claim checkbox."
+  },
+  "inventoryCheckLabel": {
+    "message": "Timed inventory check",
+    "description": "Label of the timed inventory check select (settings page, Scanning)."
+  },
+  "inventoryCheckHint": {
+    "message": "Reads the inventory on this timer: reloads an inventory tab you have open, or opens one in the background and closes it afterwards. With Auto-claim on, it also clicks \"Claim Now\".",
+    "description": "Hint under the timed inventory check select; quotes Twitch's button, which stays English."
+  },
+  "dropAlertLabel": {
+    "message": "Check the inventory when a drop is ready",
+    "description": "Drop alert switch label (settings, Scanning)."
+  },
+  "dropAlertHint": {
+    "message": "When the Drops & More button on a channel page shows its new-item dot (or a drops notification pops up), Dragnet opens or reloads the inventory at once to read it, like the timed check. At most once every 10 minutes. Off by default.",
+    "description": "Hint under the drop alert switch; quotes Twitch button name Drops & More."
+  },
+  "inventoryCheckOff": {
+    "message": "Off",
+    "description": "Inventory check choice: no timed check."
+  },
+  "inventoryCheckMinutes_one": {
+    "message": "Every {count} minute",
+    "description": "Inventory check choice. {count}: minutes."
+  },
+  "inventoryCheckMinutes_other": {
+    "message": "Every {count} minutes",
+    "description": "Inventory check choice. {count}: minutes."
+  },
+  "inventoryCheckHours_one": {
+    "message": "Every {count} hour",
+    "description": "Inventory check choice. {count}: hours."
+  },
+  "inventoryCheckHours_other": {
+    "message": "Every {count} hours",
+    "description": "Inventory check choice. {count}: hours."
+  },
+  "stallHeading": {
+    "message": "Stall detection",
+    "description": "Settings page section heading, and help term."
+  },
+  "stallDetectLabel": {
+    "message": "Warn when progress stalls",
+    "description": "Stall detection switch label."
+  },
+  "stallDetectHint": {
+    "message": "Twitch sometimes stops counting watch time on a stream that keeps playing, until the page is reloaded. Dragnet warns when a drop has not moved for 20 minutes while a drops-enabled stream of its game plays. Works best with the timed inventory check.",
+    "description": "Hint under the stall detection switch."
+  },
+  "stallReloadLabel": {
+    "message": "Reload the stream automatically",
+    "description": "Auto-reload switch label (under stall detection)."
+  },
+  "stallReloadHint": {
+    "message": "At most once every 30 minutes, and not the tab you are looking at.",
+    "description": "Hint under the auto-reload switch."
+  },
+  "stallReloadActiveLabel": {
+    "message": "Even while I am watching it",
+    "description": "Switch: auto-reload also the tab the user is looking at."
+  },
+  "stallReloadMaxLabel": {
+    "message": "Give up after",
+    "description": "Label of the select: how many reloads before giving up."
+  },
+  "stallReloadMaxHint": {
+    "message": "Reloads in a row with no progress before Dragnet stops reloading that stream.",
+    "description": "Hint under the give-up select."
+  },
+  "stallReloadMaxOption_one": {
+    "message": "{count} reload",
+    "description": "Give-up choice. {count}: reloads."
+  },
+  "stallReloadMaxOption_other": {
+    "message": "{count} reloads",
+    "description": "Give-up choice. {count}: reloads."
+  },
+  "stallAlert": {
+    "message": "Drop progress stalled on {channel}.",
+    "description": "Line in the popup and full page when drop progress stalled. {channel}: Twitch channel login."
+  },
+  "stallReloadButton": {
+    "message": "Reload stream",
+    "description": "Button: reload the stalled stream tab."
+  },
+  "stallGaveUp_one": {
+    "message": "{channel} is not counting drop progress, even after {count} reload.",
+    "description": "Line after auto-reload gave up. {channel}: Twitch channel login; {count}: reloads tried."
+  },
+  "stallGaveUp_other": {
+    "message": "{channel} is not counting drop progress, even after {count} reloads.",
+    "description": "Line after auto-reload gave up. {channel}: Twitch channel login; {count}: reloads tried."
+  },
+  "stallFindStreams": {
+    "message": "Drops-enabled streams",
+    "description": "Link to the game's drops-enabled streams on Twitch (the user picks one)."
+  },
+  "stallDismiss": {
+    "message": "Dismiss",
+    "description": "Button: hide the give-up line."
+  },
+  "badgeReadingCampaigns": {
+    "message": "Dragnet: reading campaigns {n}/{total}",
+    "description": "Badge on the Twitch page while cards are opened. {n}: current card; {total}: cards to open."
+  },
+  "badgeReadingClaims": {
+    "message": "Dragnet: reading claimed drops ({count} so far)",
+    "description": "Badge on the Twitch page while history loads. {count}: items so far."
+  },
+  "badgeClaiming": {
+    "message": "Dragnet: claiming drops",
+    "description": "Badge on the Twitch page during auto-claim."
+  },
+  "searchPlaceholder": {
+    "message": "Search games, campaigns, rewards, channels",
+    "description": "Placeholder of the search box."
+  },
+  "searchLabel": {
+    "message": "Search",
+    "description": "Accessible name of the search box."
+  },
+  "searchCount_one": {
+    "message": "{count} of {total} campaign match",
+    "description": "Status line start while searching. {count}: matches; {total}: campaigns searched."
+  },
+  "searchCount_other": {
+    "message": "{count} of {total} campaigns match",
+    "description": "Status line start while searching. {count}: matches; {total}: campaigns searched."
+  },
+  "statusSynced": {
+    "message": "updated {ago}",
+    "description": "Status line part. {ago}: relative time of the last scan, such as \"5 minutes ago\"."
+  },
+  "groupByLabel": {
+    "message": "Group campaigns",
+    "description": "Accessible name of the grouping switch."
+  },
+  "groupByExpiry": {
+    "message": "By expiry",
+    "description": "Grouping choice: one list sorted by end date."
+  },
+  "groupByGame": {
+    "message": "By game",
+    "description": "Grouping choice: campaigns grouped by game."
+  },
+  "emptySearch": {
+    "message": "No campaigns match the search.",
+    "description": "Empty list while searching."
+  },
+  "emptyFiltered": {
+    "message": "The filters hide every campaign.",
+    "description": "Empty list when the filters hide everything."
+  },
+  "emptyNone": {
+    "message": "No active campaigns.",
+    "description": "Empty list when no campaign is running."
+  },
+  "minutesLeft_one": {
+    "message": "{count} min left",
+    "description": "Time left, in minutes."
+  },
+  "minutesLeft_other": {
+    "message": "{count} min left",
+    "description": "Time left, in minutes."
+  },
+  "readyToClaim_one": {
+    "message": "{count} to claim",
+    "description": "Badge: drops ready to claim."
+  },
+  "readyToClaim_other": {
+    "message": "{count} to claim",
+    "description": "Badge: drops ready to claim."
+  },
+  "claimedOf_one": {
+    "message": "{claimed}/{count} claimed",
+    "description": "Campaign progress. {claimed}: drops claimed; {count}: drops."
+  },
+  "claimedOf_other": {
+    "message": "{claimed}/{count} claimed",
+    "description": "Campaign progress. {claimed}: drops claimed; {count}: drops."
+  },
+  "claimedOn": {
+    "message": "Claimed around {date}",
+    "description": "Tooltip of a claimed drop; the date is estimated from Twitch's relative time. {date}: date."
+  },
+  "notConnectedHint": {
+    "message": "Link your game account to redeem these drops.",
+    "description": "Inside a campaign whose game account is not linked, before the Connect button."
+  },
+  "aboutCampaign": {
+    "message": "About this campaign",
+    "description": "Link to the campaign details page."
+  },
+  "dropsEnabledChannels": {
+    "message": "Live channels with Drops Enabled",
+    "description": "Tooltip on the tag icon (and box art) that opens the game's Twitch directory filtered to the Drops Enabled tag."
+  },
+  "warnSelectorMissing": {
+    "message": "Twitch's page layout changed ({hook} not found).",
+    "description": "Health warning. {hook}: internal name of the page part not found."
+  },
+  "warnNoCards": {
+    "message": "No campaign cards were found on the page.",
+    "description": "Health warning."
+  },
+  "warnGqlAbsent": {
+    "message": "No Twitch page data arrived. Reload the Twitch tab (needed once after switching Twitch page data on).",
+    "description": "Health warning: Twitch page data is on but none arrived."
+  },
+  "warnGqlUnrecognized": {
+    "message": "Twitch page data not recognized ({op}); the page was read without it.",
+    "description": "Health warning. {op}: Twitch operation name."
+  },
+  "openFullView": {
+    "message": "Open in a tab",
+    "description": "Popup button: open the full-page view."
+  },
+  "settingsTitle": {
+    "message": "Settings",
+    "description": "Top bar button that opens the settings page."
+  },
+  "settingsPageTitle": {
+    "message": "Dragnet settings",
+    "description": "Title of the settings page."
+  },
+  "languageButton": {
+    "message": "Language: {name}",
+    "description": "Tooltip of the round flag button. {name}: the language in use, in its own name."
+  },
+  "languageHeading": {
+    "message": "Language",
+    "description": "Settings section heading."
+  },
+  "languageLabel": {
+    "message": "Display language",
+    "description": "Label of the language choice."
+  },
+  "languageAuto": {
+    "message": "Automatic ({name})",
+    "description": "Language choice: follow Chrome. {name}: the language that gives, in its own name."
+  },
+  "languageHint": {
+    "message": "Automatic follows Chrome's language. The extension's name in Chrome's own menus always does.",
+    "description": "Hint under the language choice."
+  },
+  "hideCompleteLabel": {
+    "message": "Hide finished campaigns",
+    "description": "Filter switch: hide campaigns with every drop claimed."
+  },
+  "hideSubDropsLabel": {
+    "message": "Hide Sub Drops",
+    "description": "Filter switch: hide drops that need a subscription."
+  },
+  "gameSearchPlaceholder": {
+    "message": "Find a game",
+    "description": "Placeholder of the game list search box."
+  },
+  "gamesClear": {
+    "message": "Clear",
+    "description": "Button: uncheck every game in the game filter."
+  },
+  "scanningHeading": {
+    "message": "Scanning",
+    "description": "Settings section heading."
+  },
+  "lastScansHeading": {
+    "message": "Last scans",
+    "description": "Settings section heading: what the last scans read."
+  },
+  "unaffiliated": {
+    "message": "Not affiliated with Twitch.",
+    "description": "Footer note."
+  },
+  "openCampaignsTitle": {
+    "message": "Open Twitch's drop campaigns page",
+    "description": "Tooltip of the Campaigns button."
+  },
+  "openInventoryTitle": {
+    "message": "Open Twitch's drops inventory page",
+    "description": "Tooltip of the Inventory button."
+  },
+  "helpButton": {
+    "message": "Help",
+    "description": "Popup and full-page button: open the help page."
+  },
+  "helpTitle": {
+    "message": "Dragnet help",
+    "description": "Help page title and heading."
+  },
+  "helpBackToList": {
+    "message": "Campaign list",
+    "description": "Help page button: back to the full-page campaign list."
+  },
+  "helpContents": {
+    "message": "Contents",
+    "description": "Accessible name of the help page's section links."
+  },
+  "helpWhatHeading": {
+    "message": "What Dragnet does",
+    "description": "Help section heading."
+  },
+  "helpWhat1": {
+    "message": "Dragnet keeps a list of the Twitch drop campaigns running now and how far along you are with each drop, sorted by when they end. It reads Twitch's two drops pages, Campaigns and Inventory, as Twitch shows them to you while you are logged in.",
+    "description": "Help text."
+  },
+  "helpWhat2": {
+    "message": "It makes no network requests of its own: it reads only the pages your browser has loaded, when you (or a Full sync) open them.",
+    "description": "Help text."
+  },
+  "helpWhenHeading": {
+    "message": "When it reads",
+    "description": "Help section heading."
+  },
+  "helpVisitTerm": {
+    "message": "On every visit",
+    "description": "Help term: the quick read done whenever a drops page is opened."
+  },
+  "helpVisit": {
+    "message": "Whenever you open Twitch's drop campaigns or inventory page, Dragnet does a quick sweep. On the campaigns page it opens only the campaigns it has not read before; on the inventory page it reads progress and the newest claimed drops, loading more history only until it reaches claims it already has. A small label on the Twitch page shows while it opens campaigns.",
+    "description": "Help text."
+  },
+  "helpFullSync": {
+    "message": "Opens the campaigns page in a new tab, reads every campaign, moves on to the inventory and reads the claimed history as far back as the history setting, then closes the tab. It takes a minute or two; keep the tab in front while it works, since Chrome slows down background tabs. Use it after installing, or whenever the list looks out of date.",
+    "description": "Help text: what the Full sync button does."
+  },
+  "helpLeaveTerm": {
+    "message": "Leaving early",
+    "description": "Help term."
+  },
+  "helpLeave": {
+    "message": "If you leave a drops page before the sweep finishes, what was read so far is kept and the rest is read next time.",
+    "description": "Help text."
+  },
+  "helpListHeading": {
+    "message": "Reading the list",
+    "description": "Help section heading."
+  },
+  "helpListIntro": {
+    "message": "Each card is one game, holding all of its current campaigns; click it to show its drops. A card's time left is for its next unclaimed drop to end, and each unclaimed drop shows its own. The popup opens only campaigns with a drop in progress or ready to claim, the full page opens them all. The coloured labels mean:",
+    "description": "Help text, before the list of sample labels."
+  },
+  "helpUrgencyCritical": {
+    "message": "Ends within 24 hours. The card or drop has a red edge.",
+    "description": "Help text beside a red time-left label."
+  },
+  "helpUrgencySoon": {
+    "message": "Ends within 3 days. The card or drop has an amber edge.",
+    "description": "Help text beside an amber time-left label."
+  },
+  "helpUrgencyLater": {
+    "message": "Ends later. Hover over the label for the exact end date.",
+    "description": "Help text beside a plain time-left label."
+  },
+  "helpBadgeNotConnected": {
+    "message": "Your game account is not linked for this campaign, so its drops cannot be redeemed. Open the card and use Connect to link it on the publisher's site.",
+    "description": "Help text beside the \"Not connected\" label."
+  },
+  "helpBadgeClaimable": {
+    "message": "A drop is finished and waiting to be claimed. Claim it on Twitch's inventory page (the drop's \"Claim now\" button opens it).",
+    "description": "Help text beside the \"to claim\" label."
+  },
+  "helpBadgeClaimed": {
+    "message": "How many of the campaign's drops you have claimed. The bar turns green when all of them are.",
+    "description": "Help text beside the claimed-count bar."
+  },
+  "helpDrops": {
+    "message": "Each drop shows what it takes (watch time or subscriptions) and where it counts: named channels, or any channel streaming the game with drops enabled. A progress bar appears once Twitch's inventory shows progress, and Claimed once it is claimed. A claimed drop stays claimed even after Twitch stops listing it.",
+    "description": "Help text."
+  },
+  "helpDropsNotRead": {
+    "message": "\"Drops not read yet\" means Dragnet has seen the campaign but not opened its card: visit the campaigns page or run a Full sync.",
+    "description": "Help text; quotes the dropsNotRead message."
+  },
+  "helpSearch": {
+    "message": "Search matches every word you type against games, campaigns, publishers, drops, rewards and channels, ignoring case and accents. \"By expiry\" lists campaigns by end date; \"By game\" groups them, the game ending soonest first.",
+    "description": "Help text; quotes the groupByExpiry and groupByGame messages."
+  },
+  "helpButtons": {
+    "message": "Campaigns and Inventory open those Twitch pages. The funnel shows the filters, the gear opens the settings, the round flag opens the language setting and the question mark opens this help. In the popup, the arrow button opens the list in a tab of its own.",
+    "description": "Help text about the top bar buttons."
+  },
+  "helpFiltersIntro": {
+    "message": "Filters change only what is shown. Dragnet still reads and keeps every campaign, so changing a filter needs no new scan. The funnel button shows or hides them; a dot on it means they are open.",
+    "description": "Help text."
+  },
+  "helpConnection": {
+    "message": "Show all campaigns, hide the ones whose game account is not linked, or show only those, as a to-do list of accounts to link. A campaign whose card has not been read yet is never counted as not connected.",
+    "description": "Help text."
+  },
+  "helpHideComplete": {
+    "message": "Hides the campaigns you have finished.",
+    "description": "Help text."
+  },
+  "helpHideSubDrops": {
+    "message": "Hides drops that need a subscription. A campaign with nothing else is hidden, and one whose only unclaimed drops need a subscription counts as finished.",
+    "description": "Help text."
+  },
+  "helpGames": {
+    "message": "Check games in the list, then choose \"Hide checked\" or \"Show only checked\". With \"Show only checked\" and nothing checked, everything is shown. Games whose campaigns have ended stay in the list, still checked, until you uncheck them; Clear unchecks all.",
+    "description": "Help text; quotes the gameFilterHide, gameFilterInclude and gamesClear messages."
+  },
+  "helpSettingsHeading": {
+    "message": "Settings",
+    "description": "Help section heading."
+  },
+  "helpHistory": {
+    "message": "How far back the inventory read goes in Twitch's list of claimed drops, from 1 week to 3 months. Longer reaches older claims but takes more \"Load More\" clicks on a Full sync; a normal visit stops sooner, at the claims it already has. Claims older than this are removed from Dragnet's history.",
+    "description": "Help text."
+  },
+  "helpIncremental": {
+    "message": "Twitch sometimes adds drops to a running campaign, and you may link a game account after Dragnet read the card. With this on, each visit to the campaigns page also re-reads the 3, 5 or 10 campaigns read longest ago (at most once every 15 minutes), so such changes are picked up over a few visits without a Full sync. Campaigns not connected come round more often.",
+    "description": "Help text."
+  },
+  "helpAutoClaim": {
+    "message": "When on, a visit to the inventory page (or a Full sync) clicks each \"Claim Now\" button before reading the page. Drops are claimed only while an inventory page is open. Off by default.",
+    "description": "Help text."
+  },
+  "helpInventoryCheck": {
+    "message": "Off by default. Every 15 minutes to 4 hours, Dragnet reloads an inventory page you have open (but not one you are looking at), or opens one in a background tab and closes it once read. It reads like a visit, and with Auto-claim on it clicks \"Claim Now\", so drops are claimed without the inventory open. Apart from Full sync, this is the only time Dragnet opens a Twitch tab by itself.",
+    "description": "Help text: the timed inventory check; quotes Twitch's button, which stays English."
+  },
+  "helpStall": {
+    "message": "On by default. Twitch sometimes stops counting watch time on a stream that keeps playing; reloading the page fixes it. While a channel tab is open, Dragnet notes its channel and game, whether it is drops-enabled and whether it plays (kept only until the browser closes), and compares that with each inventory read. When none of that game's drops in progress has moved for 20 minutes, the toolbar button shows \"!\" and the list names the channel, with a Reload stream button. Optionally Dragnet reloads the tab itself, at most every 30 minutes; after the chosen number of reloads with no progress it stops and links to the game's drops-enabled streams. It never picks or switches channels for you.",
+    "description": "Help text: stall detection."
+  },
+  "helpLanguage": {
+    "message": "Dragnet's pages follow Chrome's language unless you pick one here. The round flag in the top bar shows the language in use and opens this setting. Twitch itself must stay in English for Dragnet to read it.",
+    "description": "Help text: the language setting."
+  },
+  "helpSettingsSaved": {
+    "message": "Settings and the game filter are saved in Chrome's sync storage, so they follow your Chrome profile to other computers when Chrome sync is on.",
+    "description": "Help text."
+  },
+  "helpHealthHeading": {
+    "message": "Last scans and warnings",
+    "description": "Help section heading."
+  },
+  "helpLastScans": {
+    "message": "Last scans, at the bottom of the settings page, has a card for each Twitch page: when it was last read, whether by a visit or a Full sync, how many campaign cards were opened or how many times \"Load More\" was clicked, and any warnings. The dot is green for a clean read, amber with warnings, red when a warning stopped the read.",
+    "description": "Help text."
+  },
+  "helpBanner": {
+    "message": "A red banner at the top means a read stopped because the Twitch page did not look as expected. Your stored list is kept as it was. What to do:",
+    "description": "Help text, before the list of banner messages."
+  },
+  "helpBannerLayoutTerm": {
+    "message": "Page layout changed, or no campaign cards found",
+    "description": "Help term: the layout warnings."
+  },
+  "helpBannerLayout": {
+    "message": "Reload the Twitch page once; it sometimes loads slowly or partly. If the warning stays, Twitch has changed its page and Dragnet needs an update.",
+    "description": "Help text."
+  },
+  "helpBannerLocaleTerm": {
+    "message": "A language Dragnet cannot read yet",
+    "description": "Help term: the page language warning."
+  },
+  "helpBannerLocale": {
+    "message": "Dragnet reads Twitch in English. Set Twitch's language to English (in the Twitch profile menu, Language) and open the page again. Dragnet's own language is set on its settings page.",
+    "description": "Help text."
+  },
+  "helpApisHeading": {
+    "message": "Twitch's APIs",
+    "description": "Help section heading."
+  },
+  "helpApis1": {
+    "message": "Twitch's documented public API (Helix) is fine to use, but it has no data about your drops, so Dragnet does not call it today. Dragnet reads the drops pages you already open.",
+    "description": "Help: Helix (the documented public API) is allowed but not used today."
+  },
+  "helpApis2": {
+    "message": "Dragnet never sends a request to Twitch's undocumented GraphQL API. Heavy use of that interface is the kind of traffic that can get drops paused.",
+    "description": "Help: no requests to the undocumented GraphQL API."
+  },
+  "helpApis3": {
+    "message": "Only if you switch on Twitch page data (Settings, Danger Zone; off by default), Dragnet also reads, read only, copies of the GraphQL responses Twitch's own drops pages already received. It makes no calls of its own and reads no tokens or cookies.",
+    "description": "Help: the read-only Twitch page data switch."
+  },
+  "helpDataHeading": {
+    "message": "Your data",
+    "description": "Help section heading."
+  },
+  "helpData1": {
+    "message": "Everything Dragnet reads stays in this browser. It has no server and sends nothing anywhere. It can read pages on www.twitch.tv only.",
+    "description": "Help text."
+  },
+  "helpData2": {
+    "message": "Campaigns, progress and the claimed history are kept in the extension's local storage, a copy of what the Twitch pages show that rebuilds itself on the next visit or Full sync.",
+    "description": "Help text."
+  },
+  "helpData3": {
+    "message": "Removing the extension deletes all of it.",
+    "description": "Help text."
+  },
+  "helpAbout": {
+    "message": "Free software under the GNU GPL 3.0 or later. Not affiliated with, endorsed by or sponsored by Twitch.",
+    "description": "Note at the end of the help page; keep the \"not affiliated\" statement."
+  },
+  "helpSource": {
+    "message": "Source code",
+    "description": "Footer link to the source repository."
+  },
+  "footerIssues": {
+    "message": "Report an issue",
+    "description": "Footer link to the issue tracker."
+  },
+  "helpVersion": {
+    "message": "Version {version}",
+    "description": "Help page footer. {version}: the extension version."
+  },
+  "dangerHeading": {
+    "message": "Danger Zone",
+    "description": "Settings page section heading: diagnostics and deleting stored data."
+  },
+  "twitchApiLabel": {
+    "message": "Twitch page data (read only)",
+    "description": "Danger Zone switch label: read the Twitch page data the drops pages load (settings.twitchApi)."
+  },
+  "twitchApiHint": {
+    "message": "Also reads the data Twitch's own drops pages load from Twitch's undocumented GraphQL endpoint, read only: exact times and progress, the claim history without Load More, drops the page reading misses, and which campaigns gained drops. Dragnet only copies what the page already received and never sends a request to that endpoint. Reload open Twitch tabs after changing this. Off by default.",
+    "description": "Hint under the Twitch page data switch."
+  },
+  "diagnosticsLabel": {
+    "message": "Diagnostics",
+    "description": "Diagnostics switch label."
+  },
+  "diagnosticsHint": {
+    "message": "Shows the Diagnostics button beside the filter button, a page that probes and snapshots open Twitch drops tabs, and saves a copy of Twitch markup Dragnet does not recognize. For troubleshooting; off by default.",
+    "description": "Hint under the diagnostics switch."
+  },
+  "diagnosticsTitle": {
+    "message": "Diagnostics",
+    "description": "Tooltip of the Diagnostics button in the popup and the full page."
+  },
+  "wipeLocalLabel": {
+    "message": "Delete local data",
+    "description": "Danger Zone row label."
+  },
+  "wipeLocalHint": {
+    "message": "Campaigns, progress, claimed history, last scans and diagnostic captures on this computer. They rebuild on the next visit or Full sync, except claims older than the inventory still shows.",
+    "description": "Hint for deleting local data."
+  },
+  "wipeLocalButton": {
+    "message": "Delete local",
+    "description": "Button."
+  },
+  "wipeLocalConfirm": {
+    "message": "Delete campaigns, progress, claimed history and diagnostic captures from this computer? This cannot be undone.",
+    "description": "Confirmation dialog."
+  },
+  "wipeSyncLabel": {
+    "message": "Delete synced data",
+    "description": "Danger Zone row label."
+  },
+  "wipeSyncHint": {
+    "message": "Settings and the game filter go back to their defaults. With Chrome sync on, this also resets them on your other computers.",
+    "description": "Hint for deleting sync data."
+  },
+  "wipeSyncButton": {
+    "message": "Delete synced",
+    "description": "Button."
+  },
+  "wipeSyncConfirm": {
+    "message": "Reset all settings and the game filter to their defaults, on every computer synced to this Chrome profile? This cannot be undone.",
+    "description": "Confirmation dialog."
+  },
+  "wipeAllLabel": {
+    "message": "Delete all Dragnet data",
+    "description": "Danger Zone row label."
+  },
+  "wipeAllHint": {
+    "message": "Both of the above: everything Dragnet has stored, local and synced.",
+    "description": "Hint for deleting all data."
+  },
+  "wipeAllButton": {
+    "message": "Delete all",
+    "description": "Button."
+  },
+  "wipeAllConfirm": {
+    "message": "Delete all Dragnet data, including settings and the game filter on every synced computer? This cannot be undone.",
+    "description": "Confirmation dialog."
+  },
+  "wipeDone": {
+    "message": "Deleted.",
+    "description": "Status after a delete."
+  },
+  "wipeFailed": {
+    "message": "Could not delete; see the browser console.",
+    "description": "Status when a delete fails."
+  },
+  "helpDanger": {
+    "message": "At the bottom of the settings page. Twitch page data also reads the data Twitch's own drops pages load from its undocumented GraphQL endpoint, read only (exact times and progress, the full claim history, drops the page reading misses); Dragnet only copies what the page already received and never sends a request to that endpoint. Diagnostics turns on the troubleshooting tools (off by default). The delete buttons clear Dragnet's local data (campaigns, progress, claimed history), its synced data (settings and the game filter), or both; each asks first.",
+    "description": "Help text: the Danger Zone."
+  },
+  "statsHeading": {
+    "message": "Statistics",
+    "description": "Heading of the Statistics panel on the full page."
+  },
+  "statsCampaignsHeading": {
+    "message": "Campaigns",
+    "description": "Statistics panel: heading of the campaign counts."
+  },
+  "statsCampaigns": {
+    "message": "Active campaigns",
+    "description": "Statistics panel: number of active campaigns."
+  },
+  "statsGames": {
+    "message": "Games",
+    "description": "Statistics panel: number of games with an active campaign."
+  },
+  "statsCampaignsInProgress": {
+    "message": "Campaigns in progress",
+    "description": "Statistics panel: campaigns with at least one drop in progress."
+  },
+  "statsDropsInProgress": {
+    "message": "Drops in progress",
+    "description": "Statistics panel: drops being watched toward."
+  },
+  "statsDropsClaimable": {
+    "message": "Ready to claim",
+    "description": "Statistics panel: drops at 100% waiting to be claimed."
+  },
+  "statsEnding24h": {
+    "message": "Ending within 24 hours",
+    "description": "Statistics panel: campaigns whose next unclaimed drop ends within a day."
+  },
+  "statsEnding7d": {
+    "message": "Ending within 7 days",
+    "description": "Statistics panel: campaigns whose next unclaimed drop ends within a week (includes the 24 hour ones)."
+  },
+  "statsOfAll": {
+    "message": "{shown} of {all}",
+    "description": "Statistics panel: a count under the filters against the count of all. {shown}: under the filters; {all}: all active campaigns."
+  },
+  "statsClaimsHeading": {
+    "message": "Claimed drops",
+    "description": "Statistics panel: heading of the claimed-drops counts."
+  },
+  "statsClaimsTotal": {
+    "message": "In the claim history",
+    "description": "Statistics panel: all claims in the claim history."
+  },
+  "statsClaims7": {
+    "message": "Last 7 days",
+    "description": "Statistics panel: claims in the last 7 days."
+  },
+  "statsClaims30": {
+    "message": "Last 30 days",
+    "description": "Statistics panel: claims in the last 30 days."
+  },
+  "statsChartLabel": {
+    "message": "Claims per day, last {days} days",
+    "description": "Statistics panel: accessible name of the bar chart. {days}: days shown."
+  },
+  "statsChartDay": {
+    "message": "{date}: {count}",
+    "description": "Statistics panel: tooltip of one bar. {date}: the day; {count}: claims that day."
+  },
+  "statsChartMax": {
+    "message": "peak {max}",
+    "description": "Statistics panel: the chart's tallest bar, between the first and last date. {max}: claims on the busiest day."
+  },
+  "statsNoClaims": {
+    "message": "No claims in the history yet.",
+    "description": "Statistics panel: shown instead of the chart when the history is empty."
+  },
+  "helpStats": {
+    "message": "The Statistics panel at the top of the full page counts active campaigns and games, drops in progress and ready to claim, campaigns ending within 24 hours and 7 days, and claims over the last 7 and 30 days with a bar chart per day. Where a filter hides some campaigns it shows both numbers (\"3 of 5\"). Claims come from the claim history, which keeps only as many days as the history setting.",
+    "description": "Help: the Statistics panel."
+  },
+  "aboutTitle": {
+    "message": "About Dragnet",
+    "description": "About page: title and heading."
+  },
+  "aboutDescription": {
+    "message": "Tracks Twitch drop campaigns and your claim progress, sorted by expiration date, by reading the drops pages you already open. It never calls Twitch's undocumented API.",
+    "description": "About page: what the extension does."
+  },
+  "aboutLinksHeading": {
+    "message": "Links",
+    "description": "About page: heading of the links list."
+  },
+  "aboutReadme": {
+    "message": "README",
+    "description": "About page: link to the README."
+  },
+  "aboutPrivacy": {
+    "message": "Privacy policy",
+    "description": "About page: link to the privacy policy."
+  },
+  "aboutLicense": {
+    "message": "License (GPL-3.0-or-later)",
+    "description": "About page: link to the licence text."
+  },
+  "aboutChangelogHeading": {
+    "message": "Changelog",
+    "description": "About page: heading of the changelog. The entries themselves are English only."
+  },
+  "aboutChangelogEmpty": {
+    "message": "No releases yet.",
+    "description": "About page: shown when the changelog has no entries."
+  }
+}

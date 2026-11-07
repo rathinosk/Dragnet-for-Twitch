@@ -1,0 +1,892 @@
+{
+  "localeCode": {
+    "message": "ru"
+  },
+  "extName": {
+    "message": "Dragnet for Twitch"
+  },
+  "extShortName": {
+    "message": "Dragnet"
+  },
+  "extDescription": {
+    "message": "Отслеживает кампании дропсов Twitch и ваш прогресс, по дате окончания. Не связано с Twitch."
+  },
+  "actionTitle": {
+    "message": "Dragnet"
+  },
+  "fullSync": {
+    "message": "Полная синхр."
+  },
+  "fullSyncTitle": {
+    "message": "Открыть страницы дропсов Twitch в новой вкладке и прочитать всё"
+  },
+  "statusNoScan": {
+    "message": "Ещё ничего не прочитано. Откройте страницу кампаний дропсов на Twitch или нажмите «Полная синхр.»."
+  },
+  "storageError": {
+    "message": "Не удалось прочитать хранилище."
+  },
+  "campaignCount_one": {
+    "message": "{count} кампания"
+  },
+  "campaignCount_few": {
+    "message": "{count} кампании"
+  },
+  "campaignCount_many": {
+    "message": "{count} кампаний"
+  },
+  "campaignCount_other": {
+    "message": "{count} кампании"
+  },
+  "campaignCountHidden_one": {
+    "message": "{count} кампания, скрыто фильтрами: {hidden}"
+  },
+  "campaignCountHidden_few": {
+    "message": "{count} кампании, скрыто фильтрами: {hidden}"
+  },
+  "campaignCountHidden_many": {
+    "message": "{count} кампаний, скрыто фильтрами: {hidden}"
+  },
+  "campaignCountHidden_other": {
+    "message": "{count} кампании, скрыто фильтрами: {hidden}"
+  },
+  "scanFull": {
+    "message": "Полная синхронизация"
+  },
+  "scanVisit": {
+    "message": "Посещение"
+  },
+  "scanCardsOpened_one": {
+    "message": "открыто {opened} из {count} карточки"
+  },
+  "scanCardsOpened_few": {
+    "message": "открыто {opened} из {count} карточек"
+  },
+  "scanCardsOpened_many": {
+    "message": "открыто {opened} из {count} карточек"
+  },
+  "scanCardsOpened_other": {
+    "message": "открыто {opened} из {count} карточки"
+  },
+  "scanInterrupted": {
+    "message": "Прервано"
+  },
+  "scanLoadMore_one": {
+    "message": "{count}× Load More"
+  },
+  "scanLoadMore_few": {
+    "message": "{count}× Load More"
+  },
+  "scanLoadMore_many": {
+    "message": "{count}× Load More"
+  },
+  "scanLoadMore_other": {
+    "message": "{count}× Load More"
+  },
+  "scanReachedKnown": {
+    "message": "Остановлено на известных получениях"
+  },
+  "scanGqlCampaigns": {
+    "message": "Данные Twitch (подробности: {count}, добавлено дропов: {added})"
+  },
+  "scanGqlInventory": {
+    "message": "Данные Twitch (точное время получения: {count})"
+  },
+  "scanNotRead": {
+    "message": "Ещё не прочитано"
+  },
+  "scanNoWarnings": {
+    "message": "Без предупреждений"
+  },
+  "healthIntro": {
+    "message": "Страница Twitch прочиталась не так, как ожидалось. Сохранённые данные не тронуты."
+  },
+  "warnLocaleUnsupported": {
+    "message": "Twitch показан на языке, который Dragnet пока не умеет читать ({lang}). Переключите Twitch на английский, чтобы сканировать."
+  },
+  "endsAt": {
+    "message": "Заканчивается {date}"
+  },
+  "hoursLeft_one": {
+    "message": "Остался {count} ч"
+  },
+  "hoursLeft_few": {
+    "message": "Осталось {count} ч"
+  },
+  "hoursLeft_many": {
+    "message": "Осталось {count} ч"
+  },
+  "hoursLeft_other": {
+    "message": "Осталось {count} ч"
+  },
+  "daysLeft_one": {
+    "message": "Остался {count} день"
+  },
+  "daysLeft_few": {
+    "message": "Осталось {count} дня"
+  },
+  "daysLeft_many": {
+    "message": "Осталось {count} дней"
+  },
+  "daysLeft_other": {
+    "message": "Осталось {count} дня"
+  },
+  "durationHoursMinutes": {
+    "message": "{h} ч {m} мин"
+  },
+  "durationHours": {
+    "message": "{h} ч"
+  },
+  "durationMinutes": {
+    "message": "{m} мин"
+  },
+  "subsRequired_one": {
+    "message": "{count} подписка"
+  },
+  "subsRequired_few": {
+    "message": "{count} подписки"
+  },
+  "subsRequired_many": {
+    "message": "{count} подписок"
+  },
+  "subsRequired_other": {
+    "message": "{count} подписки"
+  },
+  "subsUnknown": {
+    "message": "подписки"
+  },
+  "progressOfMinutes": {
+    "message": "{percent}% ({done} из {total})"
+  },
+  "progressPercent": {
+    "message": "{percent}%"
+  },
+  "stateClaimed": {
+    "message": "Получено"
+  },
+  "stateClaimNow": {
+    "message": "Получить"
+  },
+  "watchOn": {
+    "message": "на"
+  },
+  "watchOr": {
+    "message": "или"
+  },
+  "moreChannels": {
+    "message": "других каналах"
+  },
+  "anyChannel": {
+    "message": "любой канал с дропсами"
+  },
+  "notConnected": {
+    "message": "Не привязан"
+  },
+  "connect": {
+    "message": "Привязать"
+  },
+  "noDrops": {
+    "message": "Дропсы не указаны."
+  },
+  "dropsNotRead": {
+    "message": "Дропсы ещё не прочитаны."
+  },
+  "openCampaigns": {
+    "message": "Кампании"
+  },
+  "openInventory": {
+    "message": "Инвентарь"
+  },
+  "filtersHeading": {
+    "message": "Фильтры"
+  },
+  "connectionFilterLabel": {
+    "message": "Игровой аккаунт"
+  },
+  "connectionFilterAll": {
+    "message": "Показывать все"
+  },
+  "connectionFilterHide": {
+    "message": "Скрыть без привязки"
+  },
+  "connectionFilterOnly": {
+    "message": "Только без привязки"
+  },
+  "gameFilterLabel": {
+    "message": "Игры"
+  },
+  "gameFilterHide": {
+    "message": "Скрыть отмеченные"
+  },
+  "gameFilterInclude": {
+    "message": "Только отмеченные"
+  },
+  "historyLabel": {
+    "message": "История полученных дропсов"
+  },
+  "historyHint": {
+    "message": "Как далеко полная синхронизация читает список полученных дропсов Twitch; более старые получения не сохраняются."
+  },
+  "historyDays_one": {
+    "message": "{count} день"
+  },
+  "historyDays_few": {
+    "message": "{count} дня"
+  },
+  "historyDays_many": {
+    "message": "{count} дней"
+  },
+  "historyDays_other": {
+    "message": "{count} дня"
+  },
+  "historyWeeks_one": {
+    "message": "{count} неделя"
+  },
+  "historyWeeks_few": {
+    "message": "{count} недели"
+  },
+  "historyWeeks_many": {
+    "message": "{count} недель"
+  },
+  "historyWeeks_other": {
+    "message": "{count} недели"
+  },
+  "historyMonths_one": {
+    "message": "{count} месяц"
+  },
+  "historyMonths_few": {
+    "message": "{count} месяца"
+  },
+  "historyMonths_many": {
+    "message": "{count} месяцев"
+  },
+  "historyMonths_other": {
+    "message": "{count} месяца"
+  },
+  "incrementalLabel": {
+    "message": "Перечитывать старые кампании"
+  },
+  "incrementalHint": {
+    "message": "Каждое посещение страницы кампаний также перечитывает давно прочитанные кампании, чтобы заметить добавленные дропсы и недавно привязанные аккаунты."
+  },
+  "incrementalCountLabel": {
+    "message": "Кампаний за посещение"
+  },
+  "autoClaimLabel": {
+    "message": "Автополучение дропсов"
+  },
+  "autoClaimHint": {
+    "message": "Нажимает «Claim Now», когда открыта страница инвентаря."
+  },
+  "autoClaimUnavailable": {
+    "message": "(недоступно, пока кнопка «Claim Now» Twitch не будет увидена и проверена)"
+  },
+  "inventoryCheckLabel": {
+    "message": "Проверка инвентаря по таймеру"
+  },
+  "inventoryCheckHint": {
+    "message": "Читает инвентарь с этим интервалом: перезагружает открытую вкладку инвентаря или открывает её в фоне и потом закрывает. С включённым автополучением также нажимает «Claim Now»."
+  },
+  "dropAlertLabel": {
+    "message": "Проверять инвентарь, когда дроп готов",
+    "description": "Drop alert switch label (settings, Scanning)."
+  },
+  "dropAlertHint": {
+    "message": "Когда кнопка «Drops & More» на странице канала показывает точку нового или появляется уведомление о дропах, Dragnet сразу открывает или перезагружает инвентарь и читает его, как при проверке по таймеру. Не чаще раза в 10 минут. По умолчанию выключено.",
+    "description": "Hint under the drop alert switch; quotes Twitch button name Drops & More."
+  },
+  "inventoryCheckOff": {
+    "message": "Выкл."
+  },
+  "inventoryCheckMinutes_one": {
+    "message": "Раз в {count} минуту"
+  },
+  "inventoryCheckMinutes_few": {
+    "message": "Раз в {count} минуты"
+  },
+  "inventoryCheckMinutes_many": {
+    "message": "Раз в {count} минут"
+  },
+  "inventoryCheckMinutes_other": {
+    "message": "Раз в {count} минуты"
+  },
+  "inventoryCheckHours_one": {
+    "message": "Раз в {count} час"
+  },
+  "inventoryCheckHours_few": {
+    "message": "Раз в {count} часа"
+  },
+  "inventoryCheckHours_many": {
+    "message": "Раз в {count} часов"
+  },
+  "inventoryCheckHours_other": {
+    "message": "Раз в {count} часа"
+  },
+  "stallHeading": {
+    "message": "Обнаружение остановки"
+  },
+  "stallDetectLabel": {
+    "message": "Предупреждать об остановке прогресса"
+  },
+  "stallDetectHint": {
+    "message": "Иногда Twitch перестаёт засчитывать время просмотра трансляции, которая продолжает идти, пока страницу не перезагрузят. Dragnet предупреждает, если дропс не продвинулся за 20 минут, пока идёт трансляция его игры с включёнными дропсами. Лучше всего работает вместе с проверкой инвентаря по таймеру."
+  },
+  "stallReloadLabel": {
+    "message": "Перезагружать трансляцию автоматически"
+  },
+  "stallReloadHint": {
+    "message": "Не чаще раза в 30 минут и никогда не вкладку, которую вы смотрите."
+  },
+  "stallReloadActiveLabel": {
+    "message": "Даже когда я её смотрю"
+  },
+  "stallReloadMaxLabel": {
+    "message": "Сдаться после"
+  },
+  "stallReloadMaxHint": {
+    "message": "Сколько перезагрузок подряд без прогресса, прежде чем Dragnet перестанет перезагружать эту трансляцию."
+  },
+  "stallReloadMaxOption_one": {
+    "message": "{count} перезагрузки"
+  },
+  "stallReloadMaxOption_few": {
+    "message": "{count} перезагрузок"
+  },
+  "stallReloadMaxOption_many": {
+    "message": "{count} перезагрузок"
+  },
+  "stallReloadMaxOption_other": {
+    "message": "{count} перезагрузки"
+  },
+  "stallAlert": {
+    "message": "Прогресс дропсов на {channel} остановился."
+  },
+  "stallReloadButton": {
+    "message": "Перезагрузить трансляцию"
+  },
+  "stallGaveUp_one": {
+    "message": "{channel} не засчитывает прогресс дропсов даже после {count} перезагрузки."
+  },
+  "stallGaveUp_few": {
+    "message": "{channel} не засчитывает прогресс дропсов даже после {count} перезагрузок."
+  },
+  "stallGaveUp_many": {
+    "message": "{channel} не засчитывает прогресс дропсов даже после {count} перезагрузок."
+  },
+  "stallGaveUp_other": {
+    "message": "{channel} не засчитывает прогресс дропсов даже после {count} перезагрузки."
+  },
+  "stallFindStreams": {
+    "message": "Трансляции с дропсами"
+  },
+  "stallDismiss": {
+    "message": "Скрыть"
+  },
+  "badgeReadingCampaigns": {
+    "message": "Dragnet: чтение кампаний {n}/{total}"
+  },
+  "badgeReadingClaims": {
+    "message": "Dragnet: чтение полученных дропсов (пока {count})"
+  },
+  "badgeClaiming": {
+    "message": "Dragnet: получение дропсов"
+  },
+  "searchPlaceholder": {
+    "message": "Поиск игр, кампаний, наград, каналов"
+  },
+  "searchLabel": {
+    "message": "Поиск"
+  },
+  "searchCount_one": {
+    "message": "Найдено {count} из {total} кампаний"
+  },
+  "searchCount_few": {
+    "message": "Найдено {count} из {total} кампаний"
+  },
+  "searchCount_many": {
+    "message": "Найдено {count} из {total} кампаний"
+  },
+  "searchCount_other": {
+    "message": "Найдено {count} из {total} кампаний"
+  },
+  "statusSynced": {
+    "message": "обновлено {ago}"
+  },
+  "groupByLabel": {
+    "message": "Группировка кампаний"
+  },
+  "groupByExpiry": {
+    "message": "По окончанию"
+  },
+  "groupByGame": {
+    "message": "По игре"
+  },
+  "emptySearch": {
+    "message": "Ни одна кампания не подходит под поиск."
+  },
+  "emptyFiltered": {
+    "message": "Фильтры скрывают все кампании."
+  },
+  "emptyNone": {
+    "message": "Нет активных кампаний."
+  },
+  "minutesLeft_one": {
+    "message": "Осталась {count} мин"
+  },
+  "minutesLeft_few": {
+    "message": "Осталось {count} мин"
+  },
+  "minutesLeft_many": {
+    "message": "Осталось {count} мин"
+  },
+  "minutesLeft_other": {
+    "message": "Осталось {count} мин"
+  },
+  "readyToClaim_one": {
+    "message": "{count} к получению"
+  },
+  "readyToClaim_few": {
+    "message": "{count} к получению"
+  },
+  "readyToClaim_many": {
+    "message": "{count} к получению"
+  },
+  "readyToClaim_other": {
+    "message": "{count} к получению"
+  },
+  "claimedOf_one": {
+    "message": "Получено {claimed}/{count}"
+  },
+  "claimedOf_few": {
+    "message": "Получено {claimed}/{count}"
+  },
+  "claimedOf_many": {
+    "message": "Получено {claimed}/{count}"
+  },
+  "claimedOf_other": {
+    "message": "Получено {claimed}/{count}"
+  },
+  "claimedOn": {
+    "message": "Получено примерно {date}"
+  },
+  "notConnectedHint": {
+    "message": "Привяжите игровой аккаунт, чтобы получить эти дропсы."
+  },
+  "aboutCampaign": {
+    "message": "Об этой кампании"
+  },
+  "dropsEnabledChannels": {
+    "message": "Каналы в эфире с включёнными дропсами"
+  },
+  "warnSelectorMissing": {
+    "message": "Макет страницы Twitch изменился ({hook} не найден)."
+  },
+  "warnNoCards": {
+    "message": "На странице не найдено карточек кампаний."
+  },
+  "warnGqlAbsent": {
+    "message": "Данные страниц Twitch не поступили. Перезагрузите вкладку Twitch (нужно один раз после включения «Данных Twitch API»)."
+  },
+  "warnGqlUnrecognized": {
+    "message": "Данные страниц Twitch не распознаны ({op}); страница прочитана без них."
+  },
+  "openFullView": {
+    "message": "Открыть во вкладке"
+  },
+  "settingsTitle": {
+    "message": "Настройки"
+  },
+  "settingsPageTitle": {
+    "message": "Настройки Dragnet"
+  },
+  "languageButton": {
+    "message": "Язык: {name}"
+  },
+  "languageHeading": {
+    "message": "Язык"
+  },
+  "languageLabel": {
+    "message": "Язык интерфейса"
+  },
+  "languageAuto": {
+    "message": "Автоматически ({name})"
+  },
+  "languageHint": {
+    "message": "«Автоматически» следует языку Chrome. Название расширения в меню Chrome всегда следует ему."
+  },
+  "hideCompleteLabel": {
+    "message": "Скрыть завершённые кампании"
+  },
+  "hideSubDropsLabel": {
+    "message": "Скрыть дропы за подписку"
+  },
+  "gameSearchPlaceholder": {
+    "message": "Найти игру"
+  },
+  "gamesClear": {
+    "message": "Сбросить"
+  },
+  "scanningHeading": {
+    "message": "Сканирование"
+  },
+  "lastScansHeading": {
+    "message": "Последние сканы"
+  },
+  "unaffiliated": {
+    "message": "Не связано с Twitch."
+  },
+  "openCampaignsTitle": {
+    "message": "Открыть страницу кампаний дропсов Twitch"
+  },
+  "openInventoryTitle": {
+    "message": "Открыть инвентарь дропсов Twitch"
+  },
+  "helpButton": {
+    "message": "Справка"
+  },
+  "helpTitle": {
+    "message": "Справка Dragnet"
+  },
+  "helpBackToList": {
+    "message": "Список кампаний"
+  },
+  "helpContents": {
+    "message": "Содержание"
+  },
+  "helpWhatHeading": {
+    "message": "Что делает Dragnet"
+  },
+  "helpWhat1": {
+    "message": "Dragnet ведёт список текущих кампаний дропсов Twitch и вашего прогресса по каждому дропсу, отсортированный по дате окончания. Он читает две страницы дропсов Twitch, «Кампании» и «Инвентарь», в том виде, в каком Twitch показывает их вам после входа в аккаунт."
+  },
+  "helpWhat2": {
+    "message": "Он не делает собственных сетевых запросов: он читает только страницы, которые загрузил ваш браузер, когда их открываете вы (или «Полная синхр.»)."
+  },
+  "helpWhenHeading": {
+    "message": "Когда он читает"
+  },
+  "helpVisitTerm": {
+    "message": "При каждом посещении"
+  },
+  "helpVisit": {
+    "message": "Каждый раз, когда вы открываете страницу кампаний дропсов или инвентарь Twitch, Dragnet быстро их просматривает. На странице кампаний он открывает только кампании, которые ещё не читал; в инвентаре читает прогресс и последние полученные дропсы, подгружая историю лишь до тех пор, пока не дойдёт до уже известных получений. Пока он открывает кампании, на странице Twitch видна небольшая метка."
+  },
+  "helpFullSync": {
+    "message": "Открывает страницу кампаний в новой вкладке, читает каждую кампанию, переходит в инвентарь и читает историю получений на глубину, заданную в настройке истории, затем закрывает вкладку. Это занимает минуту-две; держите вкладку на переднем плане, так как Chrome замедляет фоновые вкладки. Используйте после установки или когда список кажется устаревшим."
+  },
+  "helpLeaveTerm": {
+    "message": "Ранний уход"
+  },
+  "helpLeave": {
+    "message": "Если вы покинете страницу дропсов до окончания просмотра, прочитанное сохранится, а остальное будет прочитано в следующий раз."
+  },
+  "helpListHeading": {
+    "message": "Как читать список"
+  },
+  "helpListIntro": {
+    "message": "Каждая карточка соответствует одной игре и содержит все её текущие кампании; нажмите на неё, чтобы показать дропсы. Оставшееся время на карточке относится к её ближайшему неполученному дропсу, а каждый неполученный дропс показывает своё. Всплывающее окно раскрывает только кампании с дропсом в процессе или готовым к получению, полная страница раскрывает все. Цветные метки означают:"
+  },
+  "helpUrgencyCritical": {
+    "message": "Заканчивается в течение 24 часов. У карточки или дропса красная рамка."
+  },
+  "helpUrgencySoon": {
+    "message": "Заканчивается в течение 3 дней. У карточки или дропса янтарная рамка."
+  },
+  "helpUrgencyLater": {
+    "message": "Заканчивается позже. Наведите указатель на метку, чтобы увидеть точную дату окончания."
+  },
+  "helpBadgeNotConnected": {
+    "message": "Ваш игровой аккаунт не привязан для этой кампании, поэтому её дропсы нельзя получить. Откройте карточку и нажмите «Привязать», чтобы привязать его на сайте издателя."
+  },
+  "helpBadgeClaimable": {
+    "message": "Дропс готов и ждёт получения. Получите его на странице инвентаря Twitch (кнопка «Получить» у дропса открывает её)."
+  },
+  "helpBadgeClaimed": {
+    "message": "Сколько дропсов кампании вы получили. Полоса становится зелёной, когда получены все."
+  },
+  "helpDrops": {
+    "message": "Каждый дропс показывает, что для него нужно (время просмотра или подписки) и где оно засчитывается: на указанных каналах или на любом канале, транслирующем игру с включёнными дропсами. Полоса прогресса появляется, когда инвентарь Twitch показывает прогресс, а после получения появляется «Получено». Полученный дропс остаётся полученным, даже когда Twitch перестаёт его показывать."
+  },
+  "helpDropsNotRead": {
+    "message": "«Дропсы ещё не прочитаны.» означает, что Dragnet видел кампанию, но не открывал её карточку: зайдите на страницу кампаний или запустите полную синхронизацию."
+  },
+  "helpSearch": {
+    "message": "Поиск сравнивает каждое введённое слово с играми, кампаниями, издателями, дропсами, наградами и каналами без учёта регистра и диакритики. «По окончанию» упорядочивает кампании по дате окончания; «По игре» группирует их, начиная с игры, которая заканчивается раньше всех."
+  },
+  "helpButtons": {
+    "message": "«Кампании» и «Инвентарь» открывают эти страницы Twitch. Воронка показывает фильтры, шестерёнка открывает настройки, круглый флаг открывает настройку языка, а знак вопроса открывает эту справку. Во всплывающем окне кнопка со стрелкой открывает список в отдельной вкладке."
+  },
+  "helpFiltersIntro": {
+    "message": "Фильтры меняют только отображение. Dragnet по-прежнему читает и хранит все кампании, поэтому смена фильтра не требует нового сканирования. Кнопка с воронкой показывает и скрывает их; точка на ней значит, что они открыты."
+  },
+  "helpConnection": {
+    "message": "Показывать все кампании, скрыть те, где игровой аккаунт не привязан, или показывать только их, как список аккаунтов, которые нужно привязать. Кампания, карточка которой ещё не прочитана, никогда не считается непривязанной."
+  },
+  "helpHideComplete": {
+    "message": "Скрывает завершённые вами кампании."
+  },
+  "helpHideSubDrops": {
+    "message": "Скрывает дропы, для которых нужна подписка. Кампания без других дропов скрывается, а кампания, где не получены только дропы за подписку, считается завершённой."
+  },
+  "helpGames": {
+    "message": "Отметьте игры в списке, затем выберите «Скрыть отмеченные» или «Только отмеченные». При «Только отмеченные» без отметок показывается всё. Игры, чьи кампании закончились, остаются в списке отмеченными, пока вы не снимете отметку; «Сбросить» снимает все отметки."
+  },
+  "helpSettingsHeading": {
+    "message": "Настройки"
+  },
+  "helpHistory": {
+    "message": "Насколько далеко в прошлое чтение инвентаря заходит в списке полученных дропсов Twitch, от 1 недели до 3 месяцев. Больший срок охватывает более старые получения, но требует больше нажатий «Load More» при полной синхронизации; обычное посещение останавливается раньше, на уже известных получениях. Более старые получения удаляются из истории Dragnet."
+  },
+  "helpIncremental": {
+    "message": "Twitch иногда добавляет дропсы в идущую кампанию, а вы можете привязать игровой аккаунт уже после того, как Dragnet прочитал карточку. Если включено, каждое посещение страницы кампаний также перечитывает 3, 5 или 10 кампаний, прочитанных раньше всех (не чаще раза в 15 минут), так что такие изменения подхватываются за несколько посещений без полной синхронизации. Кампании без привязки перечитываются чаще."
+  },
+  "helpAutoClaim": {
+    "message": "Если включено, посещение инвентаря (или полная синхронизация) нажимает каждую кнопку «Claim Now» перед чтением страницы. Дропсы получаются, только пока открыта страница инвентаря. По умолчанию выключено."
+  },
+  "helpInventoryCheck": {
+    "message": "По умолчанию выключено. Раз в 15 минут — 4 часа Dragnet перезагружает открытую страницу инвентаря (но не ту, которую вы смотрите) или открывает её в фоновой вкладке и закрывает после чтения. Страница читается как при посещении, а с включённым автополучением Dragnet нажимает «Claim Now», так что дропсы получаются без открытого инвентаря. Кроме полной синхронизации, это единственный случай, когда Dragnet сам открывает вкладку Twitch."
+  },
+  "helpStall": {
+    "message": "По умолчанию включено. Иногда Twitch перестаёт засчитывать время просмотра трансляции, которая продолжает идти; перезагрузка страницы это исправляет. Пока открыта вкладка канала, Dragnet отмечает канал и игру, включены ли дропсы и идёт ли воспроизведение (хранится только до закрытия браузера), и сравнивает это с каждым чтением инвентаря. Если ни один из текущих дропсов этой игры не продвинулся за 20 минут, кнопка на панели инструментов показывает «!», а список называет канал, с кнопкой «Перезагрузить трансляцию». По желанию Dragnet сам перезагружает вкладку, не чаще раза в 30 минут; после выбранного числа перезагрузок без прогресса он останавливается и даёт ссылку на трансляции игры с включёнными дропсами. Он никогда не выбирает и не переключает канал за вас."
+  },
+  "helpLanguage": {
+    "message": "Страницы Dragnet следуют языку Chrome, если вы не выберете язык здесь. Круглый флаг на верхней панели показывает текущий язык и открывает эту настройку. Сам Twitch должен оставаться на английском, чтобы Dragnet мог его читать."
+  },
+  "helpSettingsSaved": {
+    "message": "Настройки и фильтр игр сохраняются в синхронизируемом хранилище Chrome, поэтому они переходят вместе с вашим профилем Chrome на другие компьютеры, когда включена синхронизация Chrome."
+  },
+  "helpHealthHeading": {
+    "message": "Последние сканы и предупреждения"
+  },
+  "helpLastScans": {
+    "message": "«Последние сканы» внизу страницы настроек содержат карточку для каждой страницы Twitch: когда она была прочитана в последний раз, при посещении или полной синхронизации, сколько карточек кампаний было открыто или сколько раз была нажата «Load More», и предупреждения. Точка зелёная при чистом чтении, жёлтая при предупреждениях и красная, если предупреждение остановило чтение."
+  },
+  "helpBanner": {
+    "message": "Красный баннер вверху означает, что чтение остановилось, потому что страница Twitch выглядела не так, как ожидалось. Сохранённый список остаётся прежним. Что делать:"
+  },
+  "helpBannerLayoutTerm": {
+    "message": "Макет страницы изменился или карточки кампаний не найдены"
+  },
+  "helpBannerLayout": {
+    "message": "Перезагрузите страницу Twitch один раз; иногда она загружается медленно или не полностью. Если предупреждение не исчезает, Twitch изменил страницу, и Dragnet нуждается в обновлении."
+  },
+  "helpBannerLocaleTerm": {
+    "message": "Язык, который Dragnet пока не умеет читать"
+  },
+  "helpBannerLocale": {
+    "message": "Dragnet читает Twitch на английском. Установите английский язык Twitch (в меню профиля Twitch, «Язык») и откройте страницу снова. Язык самого Dragnet выбирается на его странице настроек."
+  },
+  "helpApisHeading": {
+    "message": "API Twitch",
+    "description": "Help section heading."
+  },
+  "helpApis1": {
+    "message": "Документированный публичный API Twitch (Helix) можно использовать, но в нём нет данных о ваших дропах, поэтому Dragnet сейчас его не вызывает. Dragnet читает страницы дропов, которые вы и так открываете.",
+    "description": "Help: Helix (the documented public API) is allowed but not used today."
+  },
+  "helpApis2": {
+    "message": "Dragnet никогда не отправляет запросы к недокументированному GraphQL API Twitch. Интенсивное использование этого интерфейса — тот трафик, из-за которого дропы могут ставить на паузу.",
+    "description": "Help: no requests to the undocumented GraphQL API."
+  },
+  "helpApis3": {
+    "message": "Только если вы включите «Данные страниц Twitch» (Настройки, Danger Zone; по умолчанию выключено), Dragnet также читает, только чтение, копии GraphQL-ответов, которые страницы дропов Twitch уже получили. Он не делает собственных вызовов и не читает токены и cookie.",
+    "description": "Help: the read-only Twitch page data switch."
+  },
+  "helpDataHeading": {
+    "message": "Ваши данные"
+  },
+  "helpData1": {
+    "message": "Всё, что читает Dragnet, остаётся в этом браузере. У него нет сервера, и он ничего никуда не отправляет. Он может читать только страницы на www.twitch.tv."
+  },
+  "helpData2": {
+    "message": "Кампании, прогресс и история получений хранятся в локальном хранилище расширения как копия того, что показывают страницы Twitch, и восстанавливаются при следующем посещении или полной синхронизации."
+  },
+  "helpData3": {
+    "message": "Удаление расширения удаляет всё это."
+  },
+  "helpAbout": {
+    "message": "Свободное ПО под лицензией GNU GPL 3.0 или более поздней. Не связано с Twitch, не одобрено и не спонсируется Twitch."
+  },
+  "helpSource": {
+    "message": "Исходный код"
+  },
+  "footerIssues": {
+    "message": "Сообщить о проблеме"
+  },
+  "helpVersion": {
+    "message": "Версия {version}"
+  },
+  "dangerHeading": {
+    "message": "Опасная зона"
+  },
+  "twitchApiLabel": {
+    "message": "Данные страниц Twitch (только чтение)",
+    "description": "Danger Zone switch label: read the Twitch page data the drops pages load (settings.twitchApi)."
+  },
+  "twitchApiHint": {
+    "message": "Также читает данные, которые сами страницы дропов Twitch загружают из недокументированного GraphQL-эндпоинта Twitch, только чтение: точное время и прогресс, историю полученных дропов без Load More, дропы, которые чтение страницы пропускает, и кампании с новыми дропами. Dragnet лишь копирует то, что страница уже получила, и никогда не отправляет запросы к этому эндпоинту. После изменения перезагрузите открытые вкладки Twitch. По умолчанию выключено.",
+    "description": "Hint under the Twitch page data switch."
+  },
+  "diagnosticsLabel": {
+    "message": "Диагностика"
+  },
+  "diagnosticsHint": {
+    "message": "Показывает кнопку «Диагностика» рядом с кнопкой фильтров: страница, которая проверяет открытые вкладки дропов Twitch и сохраняет их снимки. Также сохраняет копию разметки Twitch, которую Dragnet не распознаёт. Для поиска неполадок; по умолчанию выключено."
+  },
+  "diagnosticsTitle": {
+    "message": "Диагностика"
+  },
+  "wipeLocalLabel": {
+    "message": "Удалить локальные данные"
+  },
+  "wipeLocalHint": {
+    "message": "Кампании, прогресс, история полученных дропов, последние сканирования и диагностические записи на этом компьютере. Они восстановятся при следующем посещении или полной синхронизации, кроме полученных дропов старше тех, что ещё показывает инвентарь."
+  },
+  "wipeLocalButton": {
+    "message": "Удалить локальные"
+  },
+  "wipeLocalConfirm": {
+    "message": "Удалить кампании, прогресс, историю полученных дропов и диагностические записи с этого компьютера? Это нельзя отменить."
+  },
+  "wipeSyncLabel": {
+    "message": "Удалить синхронизируемые данные"
+  },
+  "wipeSyncHint": {
+    "message": "Настройки и фильтр игр вернутся к значениям по умолчанию. При включённой синхронизации Chrome они сбросятся и на других ваших компьютерах."
+  },
+  "wipeSyncButton": {
+    "message": "Удалить синхронизируемые"
+  },
+  "wipeSyncConfirm": {
+    "message": "Сбросить все настройки и фильтр игр на каждом компьютере, синхронизированном с этим профилем Chrome? Это нельзя отменить."
+  },
+  "wipeAllLabel": {
+    "message": "Удалить все данные Dragnet"
+  },
+  "wipeAllHint": {
+    "message": "Оба пункта выше: всё, что сохранил Dragnet, локальное и синхронизируемое."
+  },
+  "wipeAllButton": {
+    "message": "Удалить всё"
+  },
+  "wipeAllConfirm": {
+    "message": "Удалить все данные Dragnet, включая настройки и фильтр игр на каждом синхронизированном компьютере? Это нельзя отменить."
+  },
+  "wipeDone": {
+    "message": "Удалено."
+  },
+  "wipeFailed": {
+    "message": "Не удалось удалить; см. консоль браузера."
+  },
+  "helpDanger": {
+    "message": "Внизу страницы настроек. «Данные страниц Twitch» также читают данные, которые загружают сами страницы дропов Twitch (точное время и прогресс, вся история полученных, дропы, которые чтение страницы пропускает); Dragnet по-прежнему ничего не отправляет в Twitch. «Диагностика» включает инструменты для поиска неполадок (по умолчанию выключено). Кнопки удаления очищают локальные данные Dragnet (кампании, прогресс, история полученных дропов), синхронизируемые данные (настройки и фильтр игр) или и то и другое; каждая сначала спрашивает подтверждение."
+  },
+  "statsHeading": {
+    "message": "Статистика",
+    "description": "Heading of the Statistics panel on the full page."
+  },
+  "statsCampaignsHeading": {
+    "message": "Кампании",
+    "description": "Statistics panel: heading of the campaign counts."
+  },
+  "statsCampaigns": {
+    "message": "Активные кампании",
+    "description": "Statistics panel: number of active campaigns."
+  },
+  "statsGames": {
+    "message": "Игры",
+    "description": "Statistics panel: number of games with an active campaign."
+  },
+  "statsCampaignsInProgress": {
+    "message": "Кампании в процессе",
+    "description": "Statistics panel: campaigns with at least one drop in progress."
+  },
+  "statsDropsInProgress": {
+    "message": "Дропсы в процессе",
+    "description": "Statistics panel: drops being watched toward."
+  },
+  "statsDropsClaimable": {
+    "message": "Готовы к получению",
+    "description": "Statistics panel: drops at 100% waiting to be claimed."
+  },
+  "statsEnding24h": {
+    "message": "Заканчиваются в течение 24 часов",
+    "description": "Statistics panel: campaigns whose next unclaimed drop ends within a day."
+  },
+  "statsEnding7d": {
+    "message": "Заканчиваются в течение 7 дней",
+    "description": "Statistics panel: campaigns whose next unclaimed drop ends within a week (includes the 24 hour ones)."
+  },
+  "statsOfAll": {
+    "message": "{shown} из {all}",
+    "description": "Statistics panel: a count under the filters against the count of all. {shown}: under the filters; {all}: all active campaigns."
+  },
+  "statsClaimsHeading": {
+    "message": "Полученные дропсы",
+    "description": "Statistics panel: heading of the claimed-drops counts."
+  },
+  "statsClaimsTotal": {
+    "message": "В истории",
+    "description": "Statistics panel: all claims in the claim history."
+  },
+  "statsClaims7": {
+    "message": "Последние 7 дней",
+    "description": "Statistics panel: claims in the last 7 days."
+  },
+  "statsClaims30": {
+    "message": "Последние 30 дней",
+    "description": "Statistics panel: claims in the last 30 days."
+  },
+  "statsChartLabel": {
+    "message": "Получения по дням, последние {days} дн.",
+    "description": "Statistics panel: accessible name of the bar chart. {days}: days shown."
+  },
+  "statsChartDay": {
+    "message": "{date}: {count}",
+    "description": "Statistics panel: tooltip of one bar. {date}: the day; {count}: claims that day."
+  },
+  "statsChartMax": {
+    "message": "макс. {max}",
+    "description": "Statistics panel: the chart's tallest bar, between the first and last date. {max}: claims on the busiest day."
+  },
+  "statsNoClaims": {
+    "message": "В истории пока нет получений.",
+    "description": "Statistics panel: shown instead of the chart when the history is empty."
+  },
+  "helpStats": {
+    "message": "Панель «Статистика» вверху полной страницы считает активные кампании и игры, дропсы в процессе и готовые к получению, кампании, которые заканчиваются в течение 24 часов и 7 дней, и получения за последние 7 и 30 дней с гистограммой по дням. Если фильтр скрывает часть кампаний, показываются оба числа («3 из 5»). Получения берутся из истории, которая хранит ровно столько дней, сколько задано в настройке истории.",
+    "description": "Help: the Statistics panel."
+  },
+  "aboutTitle": {
+    "message": "О Dragnet",
+    "description": "About page: title and heading."
+  },
+  "aboutDescription": {
+    "message": "Отслеживает кампании дропсов Twitch и ваш прогресс, отсортированные по дате окончания, считывая страницы дропсов, которые вы и так открываете. Никогда не обращается к недокументированному API Twitch.",
+    "description": "About page: what the extension does."
+  },
+  "aboutLinksHeading": {
+    "message": "Ссылки",
+    "description": "About page: heading of the links list."
+  },
+  "aboutReadme": {
+    "message": "README",
+    "description": "About page: link to the README."
+  },
+  "aboutPrivacy": {
+    "message": "Политика конфиденциальности",
+    "description": "About page: link to the privacy policy."
+  },
+  "aboutLicense": {
+    "message": "Лицензия (GPL-3.0 или новее)",
+    "description": "About page: link to the licence text."
+  },
+  "aboutChangelogHeading": {
+    "message": "История изменений",
+    "description": "About page: heading of the changelog. The entries themselves are English only."
+  },
+  "aboutChangelogEmpty": {
+    "message": "Версий пока нет.",
+    "description": "About page: shown when the changelog has no entries."
+  }
+}
