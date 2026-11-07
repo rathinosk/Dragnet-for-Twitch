@@ -15,6 +15,14 @@ Dragnet is not affiliated with, endorsed by or sponsored by Twitch Interactive, 
   </picture>
 </p>
 
+## Install
+
+| Browser | Store |
+| --- | --- |
+| Chrome | [Chrome Web Store](https://chromewebstore.google.com/detail/cneaojpfakepepchkobghopfobgcponl) |
+| Edge | Microsoft Edge Add-ons: link to follow |
+| Firefox | Firefox Add-ons: link to follow |
+
 ## Usage
 
 1. Log in to Twitch, with Twitch set to English.
