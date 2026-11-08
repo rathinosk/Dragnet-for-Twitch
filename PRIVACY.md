@@ -1,6 +1,8 @@
-# Privacy
+# DRAGNET™ for Twitch - Privacy Policy
 
-Dragnet for Twitch ("Dragnet") is a Chrome extension that tracks Twitch drop campaigns and your claim progress. This statement covers what it reads, where that goes, and what it does not do. Last updated October 2026.
+*Last updated October 2026.*
+
+Dragnet™ for Twitch ("DRAGNET™") is a Chrome extension that tracks Twitch drop campaigns and your claim progress. This statement covers what it reads, where that goes, and what it does not do. 
 
 ## Summary
 

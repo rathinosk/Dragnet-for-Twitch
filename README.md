@@ -1,12 +1,12 @@
-# Dragnet for Twitch
+# DRAGNET™ for Twitch
 
 <img src="dragnet-for-twitch\icons\icon-128.png" alt="Dragnet icon: a fancy purple fedora." width="128">
 
 A Chrome extension that keeps track of the Twitch drop campaigns running now and your progress on each drop, sorted by when they end, so nothing expires unclaimed.
 
-Dragnet reads Twitch's drops pages, [Campaigns](https://www.twitch.tv/drops/campaigns) and [Inventory](https://www.twitch.tv/drops/inventory), as they appear in your browser while you are logged in. It makes no network requests of its own.
+DRAGNET™ reads Twitch's drops pages, [Campaigns](https://www.twitch.tv/drops/campaigns) and [Inventory](https://www.twitch.tv/drops/inventory), as they appear in your browser while you are logged in. It makes no network requests of its own.
 
-Dragnet is not affiliated with, endorsed by or sponsored by Twitch Interactive, Inc. "for Twitch" only says what it works with. See [TRADEMARK.md](TRADEMARK.md).
+DRAGNET™ is not affiliated with, endorsed by or sponsored by Twitch Interactive, Inc. "for Twitch" only says what it works with. See [TRADEMARK.md](TRADEMARK.md).
 
 <p>
   <picture>
@@ -133,4 +133,4 @@ docs/screenshots/     images used here
 
 Copyright (C) 2026 Rathinosk. Licensed under the GNU General Public License v3.0 or later: see [LICENSE](LICENSE).
 
-The names "Dragnet for Twitch" and "Dragnet" are reserved and not covered by the license: forks and redistributions must use another name. See [TRADEMARK.md](TRADEMARK.md).
+The names "DRAGNET™ for Twitch" and "DRAGNET™" are reserved and not covered by the license: forks and redistributions must use another name. See [TRADEMARK.md](TRADEMARK.md).
